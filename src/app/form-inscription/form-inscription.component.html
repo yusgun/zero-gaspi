@@ -3,31 +3,33 @@
     <form>
         <div class="form-inline align-items-center">
             <label for="utilisateur">Vous êtes &nbsp;</label>
-            <select class="custom-select custom-select-sm" id="inlineFormCustomSelect">
-                <option value="">--</option>
-                <option value="association">Une association</option>
-                <option value="particulier">Un particulier</option>
-                <option value="professionnel">Un professionnel</option>
+            <select class="custom-select custom-select-sm" id="utilisateur" (change)="onChange($event.target.value)">
+                <option *ngFor="let typeUser of users" [value]="typeUser.type">{{ typeUser.libele }}</option>
             </select>
         </div>
-        <div class="card mt-3">
-            <div class="card-header">
-                Informations
+        <ng-template [ngIf]="user !== ''">
+            <div class="card mt-3">
+                <div class="card-header">
+                    Informations
+                </div>
+                <div class="card-body">
+                    <input-card id="nom" libele="Nom" *ngIf="user === 'particulier'"></input-card>
+                    <input-card id="prenom" libele="Prénom" *ngIf="user === 'particulier'"></input-card>
+                    <input-card id="nomAssociation" libele="Nom de l'association" *ngIf="user === 'association'">
+                    </input-card>
+                    <input-card id="nomEntreprise" libele="Nom de l'entreprise" *ngIf="user === 'professionnel'">
+                    </input-card>
+                    <input-card id="telephone" libele="Numéro de télephone"></input-card>
+                    <input-card id="adresse" libele="Adresse"></input-card>
+                    <input-card id="cp" libele="Code postal"></input-card>
+                    <input-card id="ville" libele="Ville"></input-card>
+                    <input-card type="password" id="mdp" libele="Mot de passe"></input-card>
+                    <input-card type="password" id="confirmMdp" libele="Confirmer mot de passe"></input-card>
+                    <input-card id="rna" libele="Numéro RNA" *ngIf="user === 'association'"></input-card>
+                    <input-card id="siret" libele="Numéro SIRET" *ngIf="user === 'professionnel'"></input-card>
+                    <button-submit libele="Créer son compte"></button-submit>
+                </div>
             </div>
-            <div class="card-body">
-                <input-card id="nom" libele="Nom"></input-card>
-                <input-card id="prenom" libele="Prénom"></input-card>
-                <input-card id="nomAssociation" libele="Nom de l'association"></input-card>
-                <input-card id="telephone" libele="Numéro de télephone"></input-card>
-                <input-card id="adresse" libele="Adresse"></input-card>
-                <input-card id="cp" libele="Code postal"></input-card>
-                <input-card id="ville" libele="Ville"></input-card>
-                <input-card type="password" id="mdp" libele="Mot de passe"></input-card>
-                <input-card type="password" id="confirmMdp" libele="Confirmer mot de passe"></input-card>
-                <input-card id="rna" libele="Numéro RNA"></input-card>
-                <input-card id="siret" libele="Numéro SIRET"></input-card>
-                <button-submit libele="Créer son compte"></button-submit>
-            </div>
-        </div>
+        </ng-template>
     </form>
 </div>

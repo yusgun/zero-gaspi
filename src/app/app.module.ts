@@ -20,7 +20,7 @@ import { ButtonSubmitComponent } from './button-submit/button-submit.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
