@@ -1,0 +1,33 @@
+<div class="container">
+    <h2 class="text-center">Création de compte</h2>
+    <form>
+        <div class="form-inline align-items-center">
+            <label for="utilisateur">Vous êtes &nbsp;</label>
+            <select class="custom-select custom-select-sm" id="inlineFormCustomSelect">
+                <option value="">--</option>
+                <option value="association">Une association</option>
+                <option value="particulier">Un particulier</option>
+                <option value="professionnel">Un professionnel</option>
+            </select>
+        </div>
+        <div class="card mt-3">
+            <div class="card-header">
+                Informations
+            </div>
+            <div class="card-body">
+                <input-card id="nom" libele="Nom"></input-card>
+                <input-card id="prenom" libele="Prénom"></input-card>
+                <input-card id="nomAssociation" libele="Nom de l'association"></input-card>
+                <input-card id="telephone" libele="Numéro de télephone"></input-card>
+                <input-card id="adresse" libele="Adresse"></input-card>
+                <input-card id="cp" libele="Code postal"></input-card>
+                <input-card id="ville" libele="Ville"></input-card>
+                <input-card type="password" id="mdp" libele="Mot de passe"></input-card>
+                <input-card type="password" id="confirmMdp" libele="Confirmer mot de passe"></input-card>
+                <input-card id="rna" libele="Numéro RNA"></input-card>
+                <input-card id="siret" libele="Numéro SIRET"></input-card>
+                <button-submit libele="Créer son compte"></button-submit>
+            </div>
+        </div>
+    </form>
+</div>
