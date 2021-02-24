@@ -1,6 +1,6 @@
 <div class="container">
     <h2 class="text-center">Création de compte</h2>
-    <form>
+    <form (ngSubmit)="onSubmit()" [formGroup]="userProfilForm">
         <div class="form-inline align-items-center">
             <label for="utilisateur">Vous êtes &nbsp;</label>
             <select class="custom-select custom-select-sm" id="utilisateur" (change)="onChange($event.target.value)">
@@ -13,7 +13,7 @@
                     Informations
                 </div>
                 <div class="card-body">
-                    <input-card id="nom" libele="Nom" *ngIf="user === 'particulier'"></input-card>
+                    <input-card id="nom" libele="Nom" *ngIf="user === 'particulier'" formControleName="nom"></input-card>
                     <input-card id="prenom" libele="Prénom" *ngIf="user === 'particulier'"></input-card>
                     <input-card id="nomAssociation" libele="Nom de l'association" *ngIf="user === 'association'">
                     </input-card>

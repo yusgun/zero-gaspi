@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'input-card',
@@ -14,12 +15,11 @@ export class InputCardComponent implements OnInit {
 
   @Input() libele: string;
   @Input() id: string;
-  @Input() type: string = "text";
+  @Input() type: string = "text"; // input de type texte par défaut si rien n'est enseigné
   @Input() placeholder?: string; // paramètre optionel
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
