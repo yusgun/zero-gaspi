@@ -8,6 +8,7 @@ import { FormConnexionComponent } from './form-connexion/form-connexion.componen
 import { FormInscriptionComponent } from './form-inscription/form-inscription.component';
 import { InputCardComponent } from './input-card/input-card.component';
 import { ButtonSubmitComponent } from './button-submit/button-submit.component';
+import { ParamComponent } from './param/param.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ButtonSubmitComponent } from './button-submit/button-submit.component';
     FormConnexionComponent,
     FormInscriptionComponent,
     InputCardComponent,
-    ButtonSubmitComponent
+    ButtonSubmitComponent,
+    ParamComponent
   ],
   imports: [
     BrowserModule,
