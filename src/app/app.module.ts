@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NavbarVendeurComponent } from './navbar-vendeur/navbar-vendeur.component';
+import { ParametreComponent } from './parametre/parametre.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    NavbarVendeurComponent
+    NavbarVendeurComponent,
+    ParametreComponent
   ],
   imports: [
     BrowserModule,
