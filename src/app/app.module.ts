@@ -7,6 +7,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './footer/footer.component';
 import { PageAcheteurComponent } from './page-acheteur/page-acheteur.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PageParametreComponent } from './page-parametre/page-parametre.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppComponent,
     FooterComponent,
     PageAcheteurComponent,
-    NavbarComponent
+    NavbarComponent,
+    PageParametreComponent
   ],
   imports: [
     BrowserModule,
