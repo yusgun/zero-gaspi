@@ -21,7 +21,7 @@ import { NavbarVendeurComponent } from './navbar-vendeur/navbar-vendeur.componen
     PageAcheteurComponent,
     NavbarComponent,
     ListingCardComponent,
-    LineCardComponent
+    LineCardComponent,
     PageParametreComponent,
     PageVendeurComponent,
     NavbarVendeurComponent
