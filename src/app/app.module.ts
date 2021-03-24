@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './footer/footer.component';
 import { PageAcheteurComponent } from './page-acheteur/page-acheteur.component';
+import { NavbarComponent } from './navbar/navbar.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    PageAcheteurComponent
+    PageAcheteurComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

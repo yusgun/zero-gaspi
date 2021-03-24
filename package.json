@@ -25,12 +25,14 @@
     "@types/leaflet": "^1.5.23",
     "bootstrap": "^4.6.0",
     "leaflet": "^1.7.1",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1101.4",
+    "@angular-devkit/build-angular": "^0.1101.4",
     "@angular/cli": "~11.1.4",
     "@angular/compiler-cli": "~11.1.2",
     "@types/jasmine": "~3.6.0",
