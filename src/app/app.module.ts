@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { PageAcheteurComponent } from './page-acheteur/page-acheteur.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PageParametreComponent } from './page-parametre/page-parametre.component';
+import { PageVendeurComponent } from './page-vendeur/page-vendeur.component';
+import { NavbarVendeurComponent } from './navbar-vendeur/navbar-vendeur.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { PageParametreComponent } from './page-parametre/page-parametre.componen
     FooterComponent,
     PageAcheteurComponent,
     NavbarComponent,
-    PageParametreComponent
+    PageParametreComponent,
+    PageVendeurComponent,
+    NavbarVendeurComponent
   ],
   imports: [
     BrowserModule,
