@@ -11,7 +11,11 @@ export class ListingCardComponent implements OnInit {
 
   @Input() titre: string = "";
 
+  @Input() commande: string = "";
+
   @Input() elements: any[] = [];
+
+  @Input() elementsC: any[] = [];
 
   ngOnInit(): void {
 

@@ -3,6 +3,7 @@
         <h5 class="card-title">{{ titre }}</h5>
     </div>
     <ul class="list-group list-group-flush" >
-        <app-line-card *ngFor="let element of elements" [element]="element.titre"></app-line-card>
+        <app-line-card *ngFor="let element of elements" [element]="element.commande"></app-line-card>
     </ul>
 </div>
+
