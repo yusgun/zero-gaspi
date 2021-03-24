@@ -12,6 +12,7 @@ import { LineCardComponent } from './line-card/line-card.component';
 import { PageParametreComponent } from './page-parametre/page-parametre.component';
 import { PageVendeurComponent } from './page-vendeur/page-vendeur.component';
 import { NavbarVendeurComponent } from './navbar-vendeur/navbar-vendeur.component';
+import { AjoutLotComponent } from './page-vendeur/ajout-lot/ajout-lot.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { NavbarVendeurComponent } from './navbar-vendeur/navbar-vendeur.componen
     LineCardComponent,
     PageParametreComponent,
     PageVendeurComponent,
-    NavbarVendeurComponent
+    NavbarVendeurComponent,
+    AjoutLotComponent
   ],
   imports: [
     BrowserModule,
