@@ -9,6 +9,9 @@ import { PageAcheteurComponent } from './page-acheteur/page-acheteur.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ListingCardComponent } from './listing-card/listing-card.component';
 import { LineCardComponent } from './line-card/line-card.component';
+import { PageParametreComponent } from './page-parametre/page-parametre.component';
+import { PageVendeurComponent } from './page-vendeur/page-vendeur.component';
+import { NavbarVendeurComponent } from './navbar-vendeur/navbar-vendeur.component';
 
 
 @NgModule({
@@ -19,6 +22,9 @@ import { LineCardComponent } from './line-card/line-card.component';
     NavbarComponent,
     ListingCardComponent,
     LineCardComponent
+    PageParametreComponent,
+    PageVendeurComponent,
+    NavbarVendeurComponent
   ],
   imports: [
     BrowserModule,
