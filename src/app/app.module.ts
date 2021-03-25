@@ -18,8 +18,6 @@ import { NotificationComponent } from './page-parametre/notification/notificatio
 import { PageVendeurComponent } from './page-vendeur/page-vendeur.component';
 import { NavbarVendeurComponent } from './navbar-vendeur/navbar-vendeur.component';
 import { AjoutLotComponent } from './page-vendeur/ajout-lot/ajout-lot.component';
-import { NgbdNavVertical } from './page-parametre/ngbd-nav-vertical/ngbd-nav-vertical.component';
-import { ParamNavComponent } from './param-nav/param-nav.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
@@ -42,8 +40,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PageVendeurComponent,
     NavbarVendeurComponent,
     AjoutLotComponent,
-    NgbdNavVertical,
-    ParamNavComponent,
   ],
   imports: [
     BrowserModule,
