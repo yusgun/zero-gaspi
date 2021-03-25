@@ -1,37 +1,111 @@
-<p>navigation works!</p>
-
 <div class="d-flex">
     <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
-      <li ngbNavItem="top">
-        <a ngbNavLink>Top</a>
+      <li ngbNavItem="1">
+        <a ngbNavLink>Profil</a>
         <ng-template ngbNavContent>
-          <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
-            master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
-            keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat
-            salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+            <h6>INFORMATIONS PERSONNELLES</h6>
+            <hr>
+            <form>
+                <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Nom complet</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="username" value=""
+                            placeholder="Bilel Boukherbache">
+
+                    </div>
+                </div>
+                <button class="btn btn-outline-info" type="button">Mettre à jour</button>
+                <button class="btn btn-outline-info" type="reset">Réinitialiser</button>
+            </form>
         </ng-template>
       </li>
-      <li ngbNavItem="middle">
-        <a ngbNavLink>Middle</a>
+      <li ngbNavItem="2">
+        <a ngbNavLink>Sécurité</a>
         <ng-template ngbNavContent>
-          <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
-            farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
-            ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
-            helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
-            8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
-            stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+            <h6>PARAMÈTRES DE SÉCURITÉ</h6>
+            <hr>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">
+                        Changer de mot de passe
+                    </label>
+                    <input type="password" class="form-control" id="exampleFormControlInput1"
+                        placeholder="votre mot de passe actuel">
+                    <br>
+                    <input type="password" class="form-control" id="exampleFormControlInput1"
+                        placeholder="votre nouveau mot de passe">
+                    <input type="password" class="form-control" id="exampleFormControlInput1"
+                        placeholder="confirmer le nouveau mot de passe">
+
+                </div>
+            </form>
         </ng-template>
       </li>
-      <li ngbNavItem="bottom">
-        <a ngbNavLink>Bottom</a>
+      <li ngbNavItem="3">
+        <a ngbNavLink>Paramètres du compte</a>
         <ng-template ngbNavContent>
-          <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi.
-            Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio.
-            Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna,
-            egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec
-            tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget
-            neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
+            <h6>PARAMÈTRES DU COMPTE</h6>
+            <hr>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label text-danger">
+                        Supprimer Compte</label>
+                    <p class="text-muted">Attention, cette action est irréversible</p>
+                </div>
+                <br>
+                <button class="btn btn-danger" type="button">Supprimer le Compte</button>
+            </form>
+        </ng-template>
+      </li>
+      <li ngbNavItem="4">
+        <a ngbNavLink>Paiement</a>
+        <ng-template ngbNavContent>
+            <h6>Paiement</h6>
+            <hr>
+            <form>
+                <div class="mb-3">
+                    <label class="d-block">Moyen De Paiement</label>
+                    <small class="text-muted small">Vous n'avez pas encore ajouter un moyen
+                        de paiement</small>
+                    <br>
+                    <button class="btn btn-outline-info mt-2"> Ajouter Un Moyen De
+                        Paiement</button>
+                </div>
+                <div class="mb-3">
+                    <label class="d-block">Historique Paiement</label>
+                    <div class="border p-3 text-center">
+                        Vous n'avez pas effectué de paiement
+                    </div>
+                </div>
+            </form>
+        </ng-template>
+      </li>
+      <li ngbNavItem="5">
+        <a ngbNavLink>Notification</a>
+        <ng-template ngbNavContent>
+            <h6>Notifications</h6>
+            <hr>
+            <form>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label d-block">
+                        Alertes</label>
+                    <small class="form-text text-muted">Recevez des notifications par
+                        mail</small>
+
+                    <div class="form-check mt-3">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Un email lorsqu'une entreprise favorite poste une annonce
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Default chekbox
+                        </label>
+                    </div>
+                </div>
+            </form>
         </ng-template>
       </li>
     </ul>
