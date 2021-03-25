@@ -1,7 +1,7 @@
 <div class="d-flex">
     <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
       <li ngbNavItem="profil-item">
-        <a ngbNavLink>Profil</a>
+        <a ngbNavLink><i class="far fa-address-book"></i>Profil</a>
         <ng-template ngbNavContent>
             <h6>INFORMATIONS PERSONNELLES</h6>
             <hr>
@@ -20,7 +20,7 @@
         </ng-template>
       </li>
       <li ngbNavItem="securite-item">
-        <a ngbNavLink>Sécurité</a>
+        <a ngbNavLink><i class="fas fa-user-shield"></i>Sécurité</a>
         <ng-template ngbNavContent>
             <h6>PARAMÈTRES DE SÉCURITÉ</h6>
             <hr>
@@ -42,7 +42,7 @@
         </ng-template>
       </li>
       <li ngbNavItem="parametresducompte-item">
-        <a ngbNavLink>Paramètres du compte</a>
+        <a ngbNavLink><i class="fas fa-user-cog"></i>Paramètres du compte</a>
         <ng-template ngbNavContent>
             <h6>PARAMÈTRES DU COMPTE</h6>
             <hr>
@@ -58,7 +58,7 @@
         </ng-template>
       </li>
       <li ngbNavItem="paiement-item">
-        <a ngbNavLink>Paiement</a>
+        <a ngbNavLink><i class="fas fa-money-check-alt"></i>Paiement</a>
         <ng-template ngbNavContent>
             <h6>Paiement</h6>
             <hr>
@@ -81,7 +81,7 @@
         </ng-template>
       </li>
       <li ngbNavItem="notification-item">
-        <a ngbNavLink>Notification</a>
+        <a ngbNavLink><i class="fas fa-bell"></i>Notification</a>
         <ng-template ngbNavContent>
             <h6>Notifications</h6>
             <hr>
