@@ -21,8 +21,6 @@ import { NavbarVendeurComponent } from './navbar-vendeur/navbar-vendeur.componen
 import { AjoutLotComponent } from './page-vendeur/ajout-lot/ajout-lot.component';
 import { FormsModule } from '@angular/forms';
 import { ModalOptionComponent } from './modal-option/modal-option.component';
-import { NgbdNavVertical } from './page-parametre/ngbd-nav-vertical/ngbd-nav-vertical.component';
-import { ParamNavComponent } from './param-nav/param-nav.component';
 
 
 
@@ -45,8 +43,6 @@ import { ParamNavComponent } from './param-nav/param-nav.component';
     NavbarVendeurComponent,
     AjoutLotComponent,
     ModalOptionComponent,
-    NgbdNavVertical,
-    ParamNavComponent,
   ],
   imports: [
     BrowserModule,
