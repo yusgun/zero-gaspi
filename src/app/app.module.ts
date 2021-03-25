@@ -13,6 +13,7 @@ import { PageParametreComponent } from './page-parametre/page-parametre.componen
 import { PageVendeurComponent } from './page-vendeur/page-vendeur.component';
 import { NavbarVendeurComponent } from './navbar-vendeur/navbar-vendeur.component';
 import { AjoutLotComponent } from './page-vendeur/ajout-lot/ajout-lot.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { AjoutLotComponent } from './page-vendeur/ajout-lot/ajout-lot.component'
     PageParametreComponent,
     PageVendeurComponent,
     NavbarVendeurComponent,
-    AjoutLotComponent
+    AjoutLotComponent,
+    FormsModule
   ],
   imports: [
     BrowserModule,

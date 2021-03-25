@@ -7,9 +7,9 @@
         <div class="col-3">
             <form class="form-inline">
                 <div class="input-group input-group-sm mb-3 w-100">
-                    <input type="text" class="form-control form-control-sm" aria-label="Small"
-                        aria-describedby="recherche" placeholder="Rechercher...">
-                    <button type="submit" class="btn btn-success btn-sm">Envoyer</button>
+                    <input type="text" class="form-control form-control-sm" [(ngModel)]="search" [ngModelOptions]="{standalone: true}" aria-label="Small"
+                        aria-describedby="recherche" placeholder="Rechercher..."> 
+                    <button type="submit" class="btn btn-success btn-sm" (click)="getSearch()">Envoyer</button>
                 </div>
             </form>
             <app-listing-card titre="Entreprises recherchés" [elements]="elements"></app-listing-card>

@@ -9,10 +9,9 @@ import * as L from 'leaflet';
 })
 export class PageAcheteurComponent implements OnInit {
 
-  elements: any[] = [
-    {titre:"Titre1"},
-    {titre:"Titre2"},
-  ];
+  search: string = "";
+
+  elements: any[] = [];
 
   // Ajout du module HttpClient pour les requêtes vers API ou serveur
   constructor(private http: HttpClient) { }
@@ -54,6 +53,14 @@ export class PageAcheteurComponent implements OnInit {
 
   ngOnInit(): void {
     this.getLocation();
+  }
+
+  getSearch(): void {
+    if(this.search != undefined && this.search != ''){
+      this.http.get('http://localhost:8080/entreprise/findby/'+this.search).subscribe((data: any[]) => {        
+        this.elements = data;
+      });
+    }
   }
 
 }

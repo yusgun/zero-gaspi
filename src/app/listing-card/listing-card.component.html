@@ -2,7 +2,7 @@
     <div class="card-body">
         <h5 class="card-title">{{ titre }}</h5>
     </div>
-    <ul class="list-group list-group-flush" >
-        <app-line-card *ngFor="let element of elements" [element]="element.titre"></app-line-card>
+    <ul class="list-group list-group-flush" *ngFor="let element of elements">
+        <app-line-card *ngIf="element.length > 0" [element]="element[0] + ' (' + element[1] + ' ' + element[2] + ')' "></app-line-card>
     </ul>
 </div>
