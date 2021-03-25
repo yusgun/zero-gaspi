@@ -38,7 +38,6 @@ import { ModalOptionComponent } from './modal-option/modal-option.component';
     NotificationComponent,
     ListingCardComponent,
     LineCardComponent,
-    PageParametreComponent,
     PageVendeurComponent,
     NavbarVendeurComponent,
     AjoutLotComponent,
