@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,18 +11,33 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ListingCardComponent } from './listing-card/listing-card.component';
 import { LineCardComponent } from './line-card/line-card.component';
 import { PageParametreComponent } from './page-parametre/page-parametre.component';
+import { ProfilComponent } from './page-parametre/profil/profil.component';
+import { SecuriteComponent } from './page-parametre/securite/securite.component';
+import { ParametresDuCompteComponent } from './page-parametre/parametres-du-compte/parametres-du-compte.component';
+import { PaiementComponent } from './page-parametre/paiement/paiement.component';
+import { NotificationComponent } from './page-parametre/notification/notification.component';
 import { PageVendeurComponent } from './page-vendeur/page-vendeur.component';
 import { NavbarVendeurComponent } from './navbar-vendeur/navbar-vendeur.component';
 import { AjoutLotComponent } from './page-vendeur/ajout-lot/ajout-lot.component';
 import { FormsModule } from '@angular/forms';
 import { ModalOptionComponent } from './modal-option/modal-option.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbdNavVertical } from './page-parametre/ngbd-nav-vertical/ngbd-nav-vertical.component';
+import { ParamNavComponent } from './param-nav/param-nav.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     PageAcheteurComponent,
     NavbarComponent,
+    PageParametreComponent,
+    ProfilComponent,
+    SecuriteComponent,
+    ParametresDuCompteComponent,
+    PaiementComponent,
+    NotificationComponent,
     ListingCardComponent,
     LineCardComponent,
     PageParametreComponent,
@@ -29,6 +45,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NavbarVendeurComponent,
     AjoutLotComponent,
     ModalOptionComponent,
+    NgbdNavVertical,
+    ParamNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +54,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FontAwesomeModule,
     HttpClientModule,
     NgbModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
