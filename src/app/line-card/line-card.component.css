@@ -1,0 +1,10 @@
+i {
+    float: right;
+    cursor: pointer;
+}
+.fa-heart {
+    color: red;
+}
+.fa-shopping-cart{
+    color: green;
+}

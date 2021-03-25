@@ -1,6 +1,7 @@
+<app-navbar></app-navbar>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-9">
+        <div class="col-9 mw-100">
             <div id="map"></div>
         </div>
         <div class="col-3">
@@ -11,39 +12,22 @@
                     <button type="submit" class="btn btn-success btn-sm">Envoyer</button>
                 </div>
             </form>
-            <div class="card w-100 mt-2">
-                <div class="card-body">
-                    <h5 class="card-title">Entreprise(s) disponible(s)</h5>
-                    <!-- Limiter la requête SQL pour l'affichage d'affichage -->
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                </ul>
-            </div>
+            <app-listing-card titre="Entreprises recherchés" [elements]="elements"></app-listing-card>
             <div class="card w-100 mt-2">
                 <div class="card-body">
                     <h5 class="card-title">Entreprises favorites</h5>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
-                    <li class="list-group-item pt-1 pb-1">Lorem ipsum dolor sit amet consectetur.</li>
+                    <li class="list-group-item">Lorem ipsum dolor sit amet consectetur.</li>
+                    <li class="list-group-item">Lorem ipsum dolor sit amet consectetur.</li>
+                    <li class="list-group-item">Lorem ipsum dolor sit amet consectetur.</li>
+                    <li class="list-group-item">Lorem ipsum dolor sit amet consectetur.</li>
+                    <li class="list-group-item">Lorem ipsum dolor sit amet consectetur.</li>
+                    <li class="list-group-item">Lorem ipsum dolor sit amet consectetur.</li>
+                    <li class="list-group-item">Lorem ipsum dolor sit amet consectetur.</li>
+                    <li class="list-group-item">Lorem ipsum dolor sit amet consectetur.</li>
+                    <li class="list-group-item">Lorem ipsum dolor sit amet consectetur.</li>
+                    <li class="list-group-item">Lorem ipsum dolor sit amet consectetur.</li>
                 </ul>
             </div>
         </div>

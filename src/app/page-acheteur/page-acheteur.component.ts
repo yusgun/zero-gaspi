@@ -9,6 +9,11 @@ import * as L from 'leaflet';
 })
 export class PageAcheteurComponent implements OnInit {
 
+  elements: any[] = [
+    {titre:"Titre1"},
+    {titre:"Titre2"},
+  ];
+
   // Ajout du module HttpClient pour les requêtes vers API ou serveur
   constructor(private http: HttpClient) { }
 
