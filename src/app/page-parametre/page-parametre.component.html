@@ -1,166 +1,147 @@
-<nav>
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item active"><a href="#">Accueil</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Paramètres</li>
-    </ol>
-</nav>
+<div class="row">
+    <div class="col-md-10 col-11 mx-auto">
+        <nav aria-label="breadcrumb" class="mb-3">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="#">Accueil</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Paramètres</li>
+            </ol>
+        </nav>
 
-<div class="col-lg-3 col-md-4 d-md-block">
-    <div class="card bg-common card-left">
-        <div class="card-body">
-            <nav class="nav d-md-block d-none">
-                <a data-toggle="tab" class="nav-link active" href="#profil">Profil</a>
-                <a data-toggle="tab" class="nav-link" href="#securite">Sécurité</a>
-                <a data-toggle="tab" class="nav-link" href="#parametresducompte">Paramètres du compte</a>
-                <a data-toggle="tab" class="nav-link" href="#paiement">Paiement</a>
-                <a data-toggle="tab" class="nav-link" href="#notification">Notification</a>
-                <a data-toggle="tab" class="nav-link" data-bs-toggle="collapse"  data-bs-target="#test" aria-expanded="false" aria-controls="collapseExample">
-                    Test
-                  </a>
-            </nav>
-        </div>
-    </div>
-</div>
+        <div class="row">
 
-<div>
-<ul class="nav nav-tabs">
-    <li class="nav-item">
-        <a data-toggle="tab" class="nav-link active" aria-current="page" href="#profil">Profil</a>
-    </li>
-    <li class="nav-item">
-        <a data-toggle="tab" class="nav-link" href="#securite">Sécurité</a>
-    </li>
-    <li class="nav-item">
-        <a data-toggle="tab" class="nav-link" href="#parametresducompte">Paramètres du compte</a>
-    </li>
-    <li class="nav-item">
-        <a data-toggle="tab" class="nav-link" href="#paiement">Paiement</a>
-    </li>
-    <li class="nav-item">
-        <a data-toggle="tab" class="nav-link" href="#notification">Notification</a>
-    </li>
-    <li class="nav-item">
-        <a data-toggle="tab" class="nav-link" data-bs-target="#test">Test
-                </a>
-    </li>
-</ul>
-</div>
-
-
-<!-- <div class="collapse" id="test"
-    <h6>Test</h6>
-    <hr>
-    <form>
-        <div class="mb-3 row">
-            <label for="staticEmail" class="col-sm-2 col-form-label">Nom complet</label>
-            <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="username"
-                    value="" placeholder="Bilel Boukherbache">
-
-            </div>
-        </div>
-        <button class="btn btn-outline-info" type="button">Mettre à jour</button>
-        <button class="btn btn-outline-info" type="reset">Réinitialiser</button>
-    </form>
-</div>
-<div class="collapse" id="#profil">
-        <h6>INFORMATIONS PERSONNELLES</h6>
-        <hr>
-        <form>
-            <div class="mb-3 row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Nom complet</label>
-                <div class="col-sm-10">
-                    <input type="text" readonly class="form-control-plaintext" id="username"
-                        value="" placeholder="Bilel Boukherbache">
-
+            <div class="col-lg-3 col-md-4 d-md-block">
+                <div class="card bg-common card-left">
+                    <div class="card-body">
+                        <nav class="nav d-md-block d-none">
+                            <a data-toggle="tab" class="nav-link active" href="#profil"><i
+                                    class="far fa-address-book"></i> Profil</a>
+                            <a data-toggle="tab" class="nav-link" href="#securite"><i
+                                    class="fas fa-user-shield"></i>Sécurité</a>
+                            <a data-toggle="tab" class="nav-link" href="#parametresducompte"><i
+                                    class="fas fa-user-cog"></i>Paramètres du compte</a>
+                            <a data-toggle="tab" class="nav-link" href="#paiement"><i
+                                    class="fas fa-money-check-alt"></i>Paiement</a>
+                            <a data-toggle="tab" class="nav-link" href="#notification"><i
+                                    class="fas fa-bell"></i>Notification</a>
+                        </nav>
+                    </div>
                 </div>
             </div>
-            <button class="btn btn-outline-info" type="button">Mettre à jour</button>
-            <button class="btn btn-outline-info" type="reset">Réinitialiser</button>
-        </form>
-</div>
-<div class="tab-pane" id="#securite">
-    <h6>PARAMÈTRES DE SÉCURITÉ</h6>
-    <hr>
-    <form>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">
-                Changer de mot de passe
-            </label>
-            <input type="password" class="form-control" id="exampleFormControlInput1"
-                placeholder="votre mot de passe actuel">
-            <br>
-            <input type="password" class="form-control" id="exampleFormControlInput1"
-                placeholder="votre nouveau mot de passe">
-            <input type="password" class="form-control" id="exampleFormControlInput1"
-                placeholder="confirmer le nouveau mot de passe">
 
-        </div>
-    </form>
-</div>
-
-<div class="tab-pane" id="#parametresducompte">
-    <h6>PARAMÈTRES DU COMPTE</h6>
-    <hr>
-    <form>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label text-danger">
-                Supprimer Compte</label>
-            <p class="text-muted">Attention, cette action est irréversible</p>
-        </div>
-        <br>
-        <button class="btn btn-danger" type="button">Supprimer le Compte</button>
-    </form>
-</div>
-
-<div class="tab-pane" id="#paiement">
-    <h6>Paiement</h6>
-    <hr>
-    <form>
-        <div class="mb-3">
-            <label class="d-block">Moyen De Paiement</label>
-            <small class="text-muted small">Vous n'avez pas encore ajouter un moyen
-                de paiement</small>
-            <br>
-            <button class="btn btn-outline-info mt-2"> Ajouter Un Moyen De
-                Paiement</button>
-        </div>
-        <div class="mb-3">
-            <label class="d-block">Historique Paiement</label>
-            <div class="border p-3 text-center">
-                Vous n'avez pas effectué de paiement
+            <div>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a data-toggle="tab" class="nav-link active" aria-current="page" href="#profil">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-toggle="tab" class="nav-link" href="#securite">Sécurité</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-toggle="tab" class="nav-link" href="#parametresducompte">Paramètres du compte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-toggle="tab" class="nav-link" href="#paiement">Paiement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-toggle="tab" class="nav-link" href="#notification">Notification</a>
+                    </li>
+                </ul>
             </div>
-        </div>
 
-    </form>
-</div>
+            <div class="collapse" id="#profil">
+                <h6>INFORMATIONS PERSONNELLES</h6>
+                <hr>
+                <form>
+                    <div class="mb-3 row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Nom complet</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" id="username" value=""
+                                placeholder="Bilel Boukherbache">
 
-    <div class="tab-pane" id="#notification">
-        <h6>Notifications</h6>
-        <hr>
-        <form>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label d-block">
-                    Alertes</label>
-                <small class="form-text text-muted">Recevez des notifications par
-                    mail</small>
-
-                <div class="form-check mt-3">
-                    <input class="form-check-input" type="checkbox" value=""
-                        id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Un email lorsqu'une entreprise favorite poste une annonce
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value=""
-                        id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        Default chekbox
-                    </label>
-                </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-info" type="button">Mettre à jour</button>
+                    <button class="btn btn-outline-info" type="reset">Réinitialiser</button>
+                </form>
             </div>
-        </form>
-    </div>> --> 
-    
-    
+            <div class="tab-pane" id="#securite">
+                <h6>PARAMÈTRES DE SÉCURITÉ</h6>
+                <hr>
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">
+                            Changer de mot de passe
+                        </label>
+                        <input type="password" class="form-control" id="exampleFormControlInput1"
+                            placeholder="votre mot de passe actuel">
+                        <br>
+                        <input type="password" class="form-control" id="exampleFormControlInput1"
+                            placeholder="votre nouveau mot de passe">
+                        <input type="password" class="form-control" id="exampleFormControlInput1"
+                            placeholder="confirmer le nouveau mot de passe">
+
+                    </div>
+                </form>
+            </div>
+
+            <div class="tab-pane" id="#parametresducompte">
+                <h6>PARAMÈTRES DU COMPTE</h6>
+                <hr>
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label text-danger">
+                            Supprimer Compte</label>
+                        <p class="text-muted">Attention, cette action est irréversible</p>
+                    </div>
+                    <br>
+                    <button class="btn btn-danger" type="button">Supprimer le Compte</button>
+                </form>
+            </div>
+
+            <div class="tab-pane" id="#paiement">
+                <h6>Paiement</h6>
+                <hr>
+                <form>
+                    <div class="mb-3">
+                        <label class="d-block">Moyen De Paiement</label>
+                        <small class="text-muted small">Vous n'avez pas encore ajouter un moyen
+                            de paiement</small>
+                        <br>
+                        <button class="btn btn-outline-info mt-2"> Ajouter Un Moyen De
+                            Paiement</button>
+                    </div>
+                    <div class="mb-3">
+                        <label class="d-block">Historique Paiement</label>
+                        <div class="border p-3 text-center">
+                            Vous n'avez pas effectué de paiement
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="" id="#notification">
+                <h6>Notifications</h6>
+                <hr>
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label d-block">
+                            Alertes</label>
+                        <small class="form-text text-muted">Recevez des notifications par
+                            mail</small>
+
+                        <div class="form-check mt-3">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Un email lorsqu'une entreprise favorite poste une annonce
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Default chekbox
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
