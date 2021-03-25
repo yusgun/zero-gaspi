@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { Lot } from 'src/app/models/lot';
+import { LotService } from 'src/app/services/lot.service';
 
 @Component({
   selector: 'app-ajout-lot',
@@ -19,16 +20,13 @@ export class AjoutLotComponent implements OnInit {
 
    baseUrl: string = 'http://localhost:8080/lot';
 
-  constructor(private http: HttpClient) { }
+  constructor(private lotApi: LotService) { }
 
   ngOnInit(): void {
   }
   create() {
     console.log(this.lot);
-    return this.http.post(this.baseUrl, this.lot).subscribe(
-      data  => {
-        console.log(data);
-      }
-    )
+    
+    this.lotApi.create(this.lot).subscribe(resp=>console.log(resp));
   }
 }
