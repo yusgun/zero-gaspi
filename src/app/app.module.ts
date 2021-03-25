@@ -19,6 +19,9 @@ import { PageVendeurComponent } from './page-vendeur/page-vendeur.component';
 import { NavbarVendeurComponent } from './navbar-vendeur/navbar-vendeur.component';
 import { AjoutLotComponent } from './page-vendeur/ajout-lot/ajout-lot.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavigationComponent } from './page-parametre/navigation/navigation.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+
 
 
 
@@ -40,13 +43,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PageVendeurComponent,
     NavbarVendeurComponent,
     AjoutLotComponent,
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
