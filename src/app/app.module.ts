@@ -14,8 +14,8 @@ import { PageVendeurComponent } from './page-vendeur/page-vendeur.component';
 import { NavbarVendeurComponent } from './navbar-vendeur/navbar-vendeur.component';
 import { AjoutLotComponent } from './page-vendeur/ajout-lot/ajout-lot.component';
 import { FormsModule } from '@angular/forms';
-
-
+import { ModalOptionComponent } from './modal-option/modal-option.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,13 +28,15 @@ import { FormsModule } from '@angular/forms';
     PageVendeurComponent,
     NavbarVendeurComponent,
     AjoutLotComponent,
-    FormsModule
+    ModalOptionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
