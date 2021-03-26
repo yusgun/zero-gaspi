@@ -11,5 +11,5 @@ export class IdentiteService {
 
   readonly route: string = environment.baseUrl;
 
-  constructor(private http: HttpClient, private connexionApi: ConnexionService) { }
+  constructor(private http: HttpClient) { }
 }

@@ -14,5 +14,5 @@ export class ConnexionService {
 
   readonly route: string = environment.baseUrl;
 
-  constructor(private http: HttpClient, private identiteApi: IdentiteService) { }
+  constructor(private http: HttpClient) { }
 }
