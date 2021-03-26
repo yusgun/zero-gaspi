@@ -12,9 +12,13 @@ export class ListingCardComponent implements OnInit {
   @Input() titre: string = "";
 
   @Input() elements: any[] = [];
-
+  
   ngOnInit(): void {
 
+  }
+
+  ajouterFavori(value: any):void{
+    
   }
 
 }

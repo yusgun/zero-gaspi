@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as L from 'leaflet';
+import { Entreprise } from '../../models/Entreprise';
 
 @Component({
   selector: 'app-page-acheteur',
@@ -11,7 +12,7 @@ export class PageAcheteurComponent implements OnInit {
 
   search: string = "";
 
-  elements: any[] = [];
+  elements: Entreprise[] = [];
 
   // Ajout du module HttpClient pour les requêtes vers API ou serveur
   constructor(private http: HttpClient) { }
@@ -57,10 +58,21 @@ export class PageAcheteurComponent implements OnInit {
 
   getSearch(): void {
     if(this.search != undefined && this.search != ''){
-      this.http.get('http://localhost:8080/entreprise/findby/'+this.search).subscribe((data: any[]) => {        
-        this.elements = data;
+      this.http.get('http://localhost:8080/entreprise/findby/'+this.search).subscribe((data: any[]) => {
+        let tmp: any[] = [];   
+        tmp = data;
+        tmp.forEach(element => {
+          this.elements.push({
+            nom: element[0],
+            ville: element[1],
+            codePostal: element[2],
+            numTel: element[3],
+            adresse: element[4],
+            id: element[5]
+          });
+        })
       });
+      console.log(this.elements);
     }
   }
-
 }

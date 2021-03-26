@@ -1,4 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbdModalContent } from '../modal/ngbd-modal-content/ngbd-modal-content.component';
 
 @Component({
   selector: 'app-line-card',
@@ -7,11 +10,28 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class LineCardComponent implements OnInit {
 
+  idClient: number = 11;
+
+  @Output() favoriEvent = new EventEmitter<String>();
+
+  search: string = "";
+
   @Input() element: any;
 
-  constructor() { }
+  constructor(private modalService: NgbModal, private http:HttpClient) {
+  }
 
   ngOnInit(): void {
+  }
+
+  open(): void {
+    const modalRef = this.modalService.open(NgbdModalContent);
+    modalRef.componentInstance.body = "Test";
+    modalRef.componentInstance.titre = this.element;
+  }
+
+  addToFavori():void{
+    this.favoriEvent.emit(this.element);
   }
 
 }

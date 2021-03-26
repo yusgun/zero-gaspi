@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalOptionComponent } from './modal-option.component';
+import { NgbdModalContentComponent } from './ngbd-modal-content.component';
 
-describe('ModalOptionComponent', () => {
-  let component: ModalOptionComponent;
-  let fixture: ComponentFixture<ModalOptionComponent>;
+describe('NgbdModalContentComponent', () => {
+  let component: NgbdModalContentComponent;
+  let fixture: ComponentFixture<NgbdModalContentComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ModalOptionComponent ]
+      declarations: [ NgbdModalContentComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModalOptionComponent);
+    fixture = TestBed.createComponent(NgbdModalContentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
