@@ -11,7 +11,6 @@ const routes: Routes = [
   {path:"vendeur", component: PageVendeurComponent, pathMatch: "full"},
   {path: "parametres", component: PageParametreComponent, pathMatch: "full"},
   {path: "ajout-lot", component: AjoutLotComponent, pathMatch: "full"},
-  {path: "navigation", component: NavigationComponent, pathMatch: "full"},
 ];
 
 @NgModule({
