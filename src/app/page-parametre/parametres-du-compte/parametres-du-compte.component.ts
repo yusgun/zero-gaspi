@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-parametres-du-compte',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParametresDuCompteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
