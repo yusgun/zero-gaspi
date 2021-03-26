@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as L from 'leaflet';
-import { Entreprise } from '../../models/Entreprise';
+import { Entreprise } from '../models/Entreprise';
 
 @Component({
   selector: 'app-page-acheteur',
@@ -72,7 +72,6 @@ export class PageAcheteurComponent implements OnInit {
           });
         })
       });
-      console.log(this.elements);
     }
   }
 }
