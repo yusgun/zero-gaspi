@@ -12,4 +12,8 @@ export class ParametresDuCompteComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  deleteAccount() {
+    
+  }
+
 }
