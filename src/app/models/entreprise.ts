@@ -1,4 +1,4 @@
-import { Vendeur } from './vendeur';
+import { Vendeur } from "./vendeur";
 export interface Entreprise {
     id: number,
     numeroSiret: string;
