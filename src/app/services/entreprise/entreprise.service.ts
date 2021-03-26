@@ -9,11 +9,10 @@ export class EntrepriseService {
 
   constructor(private http:HttpClient){}
   
-  getEntrepriseBySearch(search: string){
+  getEntrepriseBySearch(search: string): Entreprise[]{
     let entreprises: Entreprise[] = [];
     if(search !== undefined && search !== ''){
       this.http.get('http://localhost:8080/entreprise/findby/'+search).subscribe((data: any[]) => {
-        console.log(data);
         let tmp: any[] = [];   
         tmp = data;
         tmp.forEach(element => {

@@ -8,3 +8,7 @@ i {
 .fa-shopping-cart{
     color: green;
 }
+.lienModal{
+    text-decoration: underline;
+    cursor: pointer;
+}

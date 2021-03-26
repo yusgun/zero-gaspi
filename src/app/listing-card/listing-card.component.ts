@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Entreprise } from '../models/Entreprise';
 
 @Component({
   selector: 'app-listing-card',
@@ -11,14 +12,9 @@ export class ListingCardComponent implements OnInit {
 
   @Input() titre: string = "";
 
-  @Input() elements: any[] = [];
+  @Input() entreprises: Entreprise[];
   
   ngOnInit(): void {
 
   }
-
-  ajouterFavori(value: any):void{
-    
-  }
-
 }
