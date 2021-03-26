@@ -21,6 +21,7 @@ import { AjoutLotComponent } from './page-vendeur/ajout-lot/ajout-lot.component'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavigationComponent } from './page-parametre/navigation/navigation.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { BreadcrumbComponent } from './page-parametre/breadcrumb/breadcrumb.component';
 
 
 
@@ -44,6 +45,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     NavbarVendeurComponent,
     AjoutLotComponent,
     NavigationComponent,
+    BreadcrumbComponent,
   ],
   imports: [
     BrowserModule,
