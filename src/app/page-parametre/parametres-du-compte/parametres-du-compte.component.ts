@@ -17,4 +17,17 @@ export class ParametresDuCompteComponent implements OnInit {
     
   }
 
+  associationRepository() {
+
+  }
+  
+  particulierRepository() {
+
+  }
+
+  entrepriseRepository() {
+
+  }
+
+
 }
