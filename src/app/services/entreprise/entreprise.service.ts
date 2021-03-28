@@ -1,27 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Entreprise } from 'src/app/models/entreprise';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EntrepriseService {
-  status;
-  errorMessage;
+
+  private baseUrl = 'http://localhost:3306/entreprise';
 
   constructor(private http: HttpClient) { }
 
-
-  delete() {
-    this.http.delete('http://localhost:3306/entreprise/{id}')
-      .subscribe({
-        next: data => {
-          this.status = 'Delete successful';
-        },
-        error: error => {
-          this.errorMessage = error.message;
-          console.error('There was an error!', error);
-        }
-      });
+  delete(id: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
   }
+
+  update(id: number, value: any): Observable<Object> {
+    return this.http.put(`${this.baseUrl}/${id}`, value);
+  }
+
 }
