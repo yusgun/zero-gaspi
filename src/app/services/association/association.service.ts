@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Association } from "../association";
+import { Association } from 'src/app/models/association';
 
 
 @Injectable({
