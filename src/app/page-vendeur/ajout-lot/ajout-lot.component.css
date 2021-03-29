@@ -7,6 +7,10 @@
     margin-bottom: 5vh;
 }
 
-.btn-space {
+.btnretour {
+    margin: 2vh;
+}
+
+.btnconfirmer {
     margin: 3vh;
 }

@@ -21,6 +21,7 @@ import { NavbarVendeurComponent } from './navbar-vendeur/navbar-vendeur.componen
 import { AjoutLotComponent } from './page-vendeur/ajout-lot/ajout-lot.component';
 import { FormsModule } from '@angular/forms';
 import { NgbdModalContent} from './modal/ngbd-modal-content/ngbd-modal-content.component';
+import { ModifLotComponent } from './page-vendeur/modif-lot/modif-lot.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { NgbdModalContent} from './modal/ngbd-modal-content/ngbd-modal-content.c
     PageVendeurComponent,
     NavbarVendeurComponent,
     AjoutLotComponent,
-    NgbdModalContent
+    NgbdModalContent,
+    ModifLotComponent
   ],
   imports: [
     BrowserModule,

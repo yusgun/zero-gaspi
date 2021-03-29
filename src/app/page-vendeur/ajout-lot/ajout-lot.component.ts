@@ -27,6 +27,9 @@ export class AjoutLotComponent implements OnInit {
   create() {
     console.log(this.lot);
     
-    this.lotApi.create(this.lot).subscribe(resp=>console.log(resp));
+    this.lotApi.create(this.lot).subscribe(resp=>console.log(resp))
+    error => {
+      console.log(error);
+    };
   }
 }
