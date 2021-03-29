@@ -22,6 +22,10 @@ import { AjoutLotComponent } from './page-vendeur/ajout-lot/ajout-lot.component'
 import { FormsModule } from '@angular/forms';
 import { NgbdModalContent} from './modal/ngbd-modal-content/ngbd-modal-content.component';
 import { ListingFavorisComponent } from './listing-favoris/listing-favoris.component';
+import { NavigationComponent } from './page-parametre/navigation/navigation.component';
+import { BreadcrumbComponent } from './page-parametre/breadcrumb/breadcrumb.component';
+
+import { ModifLotComponent } from './page-vendeur/modif-lot/modif-lot.component';
 
 
 @NgModule({
@@ -42,7 +46,10 @@ import { ListingFavorisComponent } from './listing-favoris/listing-favoris.compo
     NavbarVendeurComponent,
     AjoutLotComponent,
     NgbdModalContent,
-    ListingFavorisComponent
+    ListingFavorisComponent,
+    NavigationComponent,
+    BreadcrumbComponent,
+    ModifLotComponent
   ],
   imports: [
     BrowserModule,

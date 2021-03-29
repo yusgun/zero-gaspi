@@ -30,17 +30,12 @@ export class AjoutLotComponent implements OnInit {
   ngOnInit(): void {
   }
   create() {
-    //console.log(this.lot);
-
-    if (this.lot) {
-      this.lotApi.create(this.lot).subscribe(resp => console.log(resp));      
-     this.statut = "Ajout effectué";
-      
-      /*const modalRef = this.modalService.open(NgbdModalContent);
-      modalRef.componentInstance.titre = "Ajout d'un lot";
-      modalRef.componentInstance.body = "Votre ajout est effectué ";*/
-    }
-
+    console.log(this.lot);
+    
+    this.lotApi.create(this.lot).subscribe(resp=>console.log(resp))
+    error => {
+      console.log(error);
+    };
   }
 }5
 

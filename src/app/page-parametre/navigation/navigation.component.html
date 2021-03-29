@@ -1,0 +1,38 @@
+<div class="d-flex">
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
+        <li ngbNavItem="profil-item">
+            <a ngbNavLink><i class="far fa-address-book"></i>Profil</a>
+            <ng-template ngbNavContent>
+                <app-profil></app-profil>
+            </ng-template>
+        </li>
+        <li ngbNavItem="parametresducompte-item">
+            <a ngbNavLink><i class="fas fa-user-cog"></i>Paramètres du compte</a>
+            <ng-template ngbNavContent>
+                <app-parametres-du-compte></app-parametres-du-compte>
+            </ng-template>
+        </li>
+        <li ngbNavItem="securite-item">
+            <a ngbNavLink><i class="fas fa-user-shield"></i>Sécurité</a>
+            <ng-template ngbNavContent>
+                <app-securite></app-securite>
+            </ng-template>
+        </li>
+        <li ngbNavItem="paiement-item">
+            <a ngbNavLink><i class="fas fa-money-check-alt"></i>Paiement</a>
+            <ng-template ngbNavContent>
+                <app-paiement></app-paiement>
+            </ng-template>
+        </li>
+        <li ngbNavItem="notification-item">
+            <a ngbNavLink><i class="fas fa-bell"></i>Notification</a>
+            <ng-template ngbNavContent>
+                <app-notification></app-notification>
+            </ng-template>
+        </li>
+    </ul>
+
+    <div [ngbNavOutlet]="nav" class="ml-4"></div>
+</div>
+
+<pre>Active: {{ active }}</pre>

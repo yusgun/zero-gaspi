@@ -1,0 +1,28 @@
+<!-- <ul *ngFor="let lot of lots">
+
+    <p> {{lot.description}}</p>
+
+</ul> -->
+<app-navbar-vendeur></app-navbar-vendeur>
+<div class="container text-center">
+    <h4>Liste des lots</h4>
+    <table class="table table-striped">
+      <thead>
+    <tr>
+      <th>Nom du lot</th>
+      <th>Description du lot</th>
+      <th>Supprimer le lot</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let lot of lots">
+      <td>{{lot.libelle}}</td>
+      <td>{{lot.description}}</td>
+      <button (click)='deleteLot(lot.id)'> <i class="fas fa-exchange-alt"></i></button> &nbsp;
+      <button (click)='deleteLot(lot.id)'> <i class="fas fa-times"></i> </button>
+    </tr>
+    <tbody>
+      </table>
+
+      <button type="button" class="btn btn-danger btn-lg" [routerLink] ="['../vendeur']">Retour</button>
+  </div>
