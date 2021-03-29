@@ -4,23 +4,23 @@
   
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Adresse mail</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">{{ adresseMail }}
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" [(ngModel)]="adresseMail">{{ adresseMail }}
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Numéro de téléphone</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="0745152512">{{ numeroTelephone }}
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="0745152512" [(ngModel)]="numeroTelephone">{{ numeroTelephone }}
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Rue</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="25 rue des marrons">{{ rue }}
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="25 rue des marrons" [(ngModel)]="rue">{{ rue }}
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Ville</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Marseille">{{ ville }}
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Marseille" [(ngModel)]="ville">{{ ville }}
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Code Postal</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="13200">{{ codePostal }}
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="13200" [(ngModel)]="codePostal">{{ codePostal }}
   </div>
   <button (click)="associationRepository()" class="btn btn-outline-info" type="button">Valider</button>
   <button class="btn btn-outline-info" type="reset">Abandonner</button>

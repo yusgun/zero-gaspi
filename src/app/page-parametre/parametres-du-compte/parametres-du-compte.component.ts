@@ -27,14 +27,10 @@ export class ParametresDuCompteComponent implements OnInit {
     this.associationApi.delete
   }
   
-  particulierRepository() {
-    this.particulierApi.delete
+  DeleteAccountForParticulier() {
+    this.particulierApi.delete(152).subscribe(data =>{
+      console.log(data)},
+      error => console.log(error))
   }
-
-  entrepriseRepository() {
-    this.entrepriseApi.delete(25).subscribe(data =>
-      console.log(data),
-      error => console.log(error));
-  }
-
 }
+

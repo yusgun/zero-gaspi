@@ -1,12 +1,12 @@
 <h6>PARAMÈTRES DU COMPTE</h6>
 <hr>
-<form>
+<div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label text-danger">
             Supprimer Compte</label>
         <p class="text-muted">Attention, cette action est irréversible</p>
     </div>
     <br>
-    <button (submit)="particulierRepository()" class="btn btn-danger" type="submit">Supprimer le Compte</button>
+    <button (click)="DeleteAccountForParticulier()" class="btn btn-danger" type="button">Supprimer le Compte</button>
     <input type="hidden">
-</form>
+</div>
