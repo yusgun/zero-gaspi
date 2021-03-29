@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgbdModalContent } from '../modal/ngbd-modal-content/ngbd-modal-content.component';
 import { Entreprise } from '../models/Entreprise';
+import { Favoris } from '../models/Favoris';
 import { FavorisService } from '../services/favoris/favoris.service';
 
 @Component({
@@ -11,8 +12,6 @@ import { FavorisService } from '../services/favoris/favoris.service';
   styleUrls: ['./line-card.component.css']
 })
 export class LineCardComponent implements OnInit {
-
-  idClient: number = 11;
 
   search: string = "";
 
@@ -31,7 +30,13 @@ export class LineCardComponent implements OnInit {
   }
 
   ajouterFavoris(entreprise: Entreprise){
-    console.log(entreprise);
+    let favoris: Favoris = {
+      association: {
+        id: 11
+      },
+      entreprise: entreprise
+    }
+    favoris = this.favorisService.create(favoris);
   }
 
   informationEntreprise(entreprise: Entreprise){
@@ -62,5 +67,4 @@ export class LineCardComponent implements OnInit {
     `;
     modalRef.componentInstance.titre = "Informations concernant " + this.entreprise.nom;
   }
-
 }
