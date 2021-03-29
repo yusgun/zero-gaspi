@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EntrepriseService } from 'src/app/services/entreprise/entreprise.service';
 import { AssociationService } from 'src/app/services/association/association.service';
 import { ParticulierService } from 'src/app/services/particulier/particulier.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-parametres-du-compte',
@@ -23,11 +24,15 @@ export class ParametresDuCompteComponent implements OnInit {
   }
   
   particulierRepository() {
-    this.particulierApi.delete(128)
+    this.particulierApi.delete(132).subscribe(data =>
+      console.log(data),
+      error => console.log(error));
   }
 
   entrepriseRepository() {
-    this.entrepriseApi.delete
+    this.entrepriseApi.delete(25).subscribe(data =>
+      console.log(data),
+      error => console.log(error));
   }
 
 }
