@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class AssociationService {
 
-  private baseUrl ='http://localhost:3306/association';
+  private baseUrl ='http://localhost:8080/association';
 
   constructor(private http: HttpClient) { }
   
@@ -17,7 +17,7 @@ export class AssociationService {
   }
 
   update(id: number, value: any): Observable<Object> {
-    return this.http.put(`${this.baseUrl}/${id}`, value);
+    return this.http.patch(`${this.baseUrl}/${id}`, value);
   }
 
 }

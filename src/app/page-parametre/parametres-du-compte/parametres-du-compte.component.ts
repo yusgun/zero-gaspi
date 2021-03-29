@@ -10,9 +10,12 @@ import { ParticulierService } from 'src/app/services/particulier/particulier.ser
 })
 export class ParametresDuCompteComponent implements OnInit {
 
+  
+
   constructor(private entrepriseApi: EntrepriseService, private associationApi: AssociationService, private particulierApi: ParticulierService) { }
 
   ngOnInit(): void {
+    
   }
 
   associationRepository() {
@@ -20,7 +23,7 @@ export class ParametresDuCompteComponent implements OnInit {
   }
   
   particulierRepository() {
-    this.particulierApi.delete
+    this.particulierApi.delete(128)
   }
 
   entrepriseRepository() {

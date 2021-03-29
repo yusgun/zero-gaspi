@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ParticulierService {
 
-  private baseUrl = 'http://localhost:3306/particulier';
+  private baseUrl = 'http://localhost:8080/particulier';
 
   constructor(private http: HttpClient) { }
 
@@ -17,7 +17,7 @@ export class ParticulierService {
   }
   
   update(id: number, value: any): Observable<Object> {
-    return this.http.put(`${this.baseUrl}/${id}`, value);
+    return this.http.patch(`${this.baseUrl}/${id}`, value);
   }
 
 }

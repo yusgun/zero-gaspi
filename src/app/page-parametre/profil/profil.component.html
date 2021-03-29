@@ -4,24 +4,24 @@
   
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Adresse mail</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">{{ adresseMail }}
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Numéro de téléphone</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="0745152512">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="0745152512">{{ numeroTelephone }}
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Rue</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="25 rue des marrons">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="25 rue des marrons">{{ rue }}
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Ville</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Marseille">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Marseille">{{ ville }}
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Code Postal</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="13200">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="13200">{{ codePostal }}
   </div>
-  <button class="btn btn-outline-info" type="button">Valider</button>
+  <button (click)="associationRepository()" class="btn btn-outline-info" type="button">Valider</button>
   <button class="btn btn-outline-info" type="reset">Abandonner</button>
 </form>
