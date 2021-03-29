@@ -1,0 +1,11 @@
+i {
+    float: right;
+    cursor: pointer;
+}
+.lienModal{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.fa-times{
+    color:red
+}

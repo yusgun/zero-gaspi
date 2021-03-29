@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Entreprise } from 'src/app/models/Entreprise';
+
 import { Favoris } from 'src/app/models/Favoris';
 
 @Injectable({
@@ -17,6 +16,10 @@ export class FavorisService {
       result = data;
     });
     return result;
+  }
+
+  deleteByIds(idClient:number, idEntreprise: number){
+    return this.http.delete("http://localhost:8080/favoris/client/"+idClient+"/entreprise/"+idEntreprise);
   }
 
   getByClient(client:number){

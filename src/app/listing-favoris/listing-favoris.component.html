@@ -2,7 +2,7 @@
     <div class="card-body">
         <h5 class="card-title">Entreprises favorites</h5>
     </div>
-    <ul class="list-group list-group-flush" *ngFor="let favori in favoris">
-        <li class="list-group-item"><span></span></li>
+    <ul class="list-group list-group-flush" *ngFor="let favori of favoris">
+        <li class="list-group-item"><span class="lienModal" (click)="informationEntreprise(favori)">{{ favori.nom }}</span><i (click)="supprimerFavori(favori.id)" class="fas fa-times"></i></li>
     </ul>
 </div>

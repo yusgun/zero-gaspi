@@ -1,4 +1,3 @@
-import { Association } from "./Association";
 import { Entreprise } from "./Entreprise";
 
 export interface Favoris {
