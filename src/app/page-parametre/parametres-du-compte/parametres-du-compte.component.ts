@@ -18,15 +18,17 @@ export class ParametresDuCompteComponent implements OnInit {
   ngOnInit(): void {
     
   }
+  getParticulierById() {
+    this.particulierApi.get
+
+  }
 
   associationRepository() {
     this.associationApi.delete
   }
   
   particulierRepository() {
-    this.particulierApi.delete(132).subscribe(data =>
-      console.log(data),
-      error => console.log(error));
+    this.particulierApi.delete
   }
 
   entrepriseRepository() {

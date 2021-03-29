@@ -11,6 +11,14 @@ export class AssociationService {
   private baseUrl ='http://localhost:8080/association';
 
   constructor(private http: HttpClient) { }
+
+  get(id: number): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${id}`);
+  }
+
+  create(association: Object): Observable<Object> {
+    return this.http.post(`${this.baseUrl}`, association);
+  }
   
   delete(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });

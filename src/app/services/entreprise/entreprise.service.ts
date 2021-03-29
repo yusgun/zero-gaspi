@@ -12,6 +12,14 @@ export class EntrepriseService {
 
   constructor(private http: HttpClient) { }
 
+  get(id: number): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${id}`);
+  }
+
+  create(entreprise: Object): Observable<Object> {
+    return this.http.post(`${this.baseUrl}`, entreprise);
+  }
+
   delete(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
   }
