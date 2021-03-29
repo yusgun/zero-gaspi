@@ -13,7 +13,8 @@ import { PageParametreComponent } from './page-parametre/page-parametre.componen
 import { PageVendeurComponent } from './page-vendeur/page-vendeur.component';
 import { NavbarVendeurComponent } from './navbar-vendeur/navbar-vendeur.component';
 import { HistoriqueComponent } from './page-acheteur/historique/historique.component';
-
+import {  MatTableModule } from '@angular/material/table';
+import {  MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { HistoriqueComponent } from './page-acheteur/historique/historique.compo
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
