@@ -24,6 +24,7 @@ import { NgbdModalContent} from './modal/ngbd-modal-content/ngbd-modal-content.c
 import {  NavigationComponent } from './page-parametre/navigation/navigation.component';
 import { BreadcrumbComponent } from './page-parametre/breadcrumb/breadcrumb.component';
 
+import { ModifLotComponent } from './page-vendeur/modif-lot/modif-lot.component';
 
 
 @NgModule({
@@ -46,8 +47,7 @@ import { BreadcrumbComponent } from './page-parametre/breadcrumb/breadcrumb.comp
     NgbdModalContent,
     NavigationComponent,
     BreadcrumbComponent,
-
-
+    ModifLotComponent
   ],
   imports: [
     BrowserModule,
