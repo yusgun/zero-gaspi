@@ -11,38 +11,31 @@ import { Connexion } from 'src/app/models/connexion';
 })
 export class ProfilComponent implements OnInit {
 
-  identite: Identite = {
-    id: 1,
-    numeroTelephone: "",
-    rue: "",
-    codePostal: "",
-    ville: "",
-    nom: "",
-    prenom: "",
-    connexion: {
-      id: 1,
-      mail: '',
-      motDePasse: ''
-    }
-  }
+  
 
 
   constructor(private entrepriseApi: EntrepriseService, private associationApi: AssociationService, private particulierApi: ParticulierService) { }
 
   ngOnInit(): void {
-    console.log(this.identite);
+    console.log();
   }
 
-  associationRepository() {
-    this.associationApi.update
+  UpdateForAssociation() {
+    this.associationApi.update(1, Object).subscribe(data =>{
+      console.log(data)},
+      error => console.log(error))
   }
 
-  particulierRepository() {
-    this.particulierApi.update
+  UpdateForParticulier() {
+    this.particulierApi.update(1, Object).subscribe(data =>{
+      console.log(data)},
+      error => console.log(error))
   }
 
-  entrepriseRepository() {
-    this.entrepriseApi.update
+  UpdateForEntreprise() {
+    this.entrepriseApi.update(1, Object).subscribe(data =>{
+      console.log(data)},
+      error => console.log(error))
   }
 
 }
