@@ -6,7 +6,8 @@ export interface Identite {
     rue: string,
     codePostal: string,
     ville: string,
-    nom: string;
+    nom: string,
     prenom: string,
-    connexion: Connexion
+    connexion: Connexion,
+    type_identite?:string
 }

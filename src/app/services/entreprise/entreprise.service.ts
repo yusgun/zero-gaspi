@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Entreprise } from '../../models/Entreprise';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -29,4 +30,28 @@ export class EntrepriseService {
     }
     return entreprises;
   }
+
+  private baseUrl = 'http://localhost:8080/entreprise';
+
+  get(id: number): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${id}`);
+  }
+
+  create(entreprise: Object): Observable<Object> {
+    return this.http.post(`${this.baseUrl}`, entreprise);
+  }
+
+  delete(id: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
+  }
+
+  update(id: number, value: any): Observable<Object> {
+    return this.http.patch(`${this.baseUrl}/${id}`, value);
+  }
+
+  updatePassword(id: number, value: any): Observable<Object> {
+    return this.http.patch(`${this.baseUrl}/${id}`, value);
+
+  }
+
 }
