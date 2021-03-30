@@ -1,10 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalAchatComponent } from '../modal/modal-achat/modal-achat.component';
 import { NgbdModalContent } from '../modal/ngbd-modal-content/ngbd-modal-content.component';
 import { Entreprise } from '../models/Entreprise';
 import { Favoris } from '../models/Favoris';
 import { FavorisService } from '../services/favoris/favoris.service';
+import { Lot } from '../models/lot';
+import { LotService } from '../services/lot.service';
 
 @Component({
   selector: 'app-line-card',
@@ -24,9 +27,9 @@ export class LineCardComponent implements OnInit {
   }
 
   open(): void {
-    const modalRef = this.modalService.open(NgbdModalContent);
-    modalRef.componentInstance.body = "Test";
+    const modalRef = this.modalService.open(ModalAchatComponent);
     modalRef.componentInstance.titre = this.entreprise.nom;
+    modalRef.componentInstance.entreprise = this.entreprise;
   }
 
   ajouterFavoris(entreprise: Entreprise){
@@ -67,4 +70,5 @@ export class LineCardComponent implements OnInit {
     `;
     modalRef.componentInstance.titre = "Informations concernant " + this.entreprise.nom;
   }
+
 }

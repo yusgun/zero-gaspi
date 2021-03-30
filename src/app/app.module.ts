@@ -26,6 +26,7 @@ import { NavigationComponent } from './page-parametre/navigation/navigation.comp
 import { BreadcrumbComponent } from './page-parametre/breadcrumb/breadcrumb.component';
 
 import { ModifLotComponent } from './page-vendeur/modif-lot/modif-lot.component';
+import { ModalAchatComponent } from './modal/modal-achat/modal-achat.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { ModifLotComponent } from './page-vendeur/modif-lot/modif-lot.component'
     ListingFavorisComponent,
     NavigationComponent,
     BreadcrumbComponent,
-    ModifLotComponent
+    ModifLotComponent,
+    ModalAchatComponent
   ],
   imports: [
     BrowserModule,

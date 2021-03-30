@@ -23,4 +23,8 @@ export class LotService {
     return this.http.delete(`${baseUrl}/${id}`);
   }
 
+  getLotByEntreprise(id : number): Observable<Lot[]>{
+    return this.http.get<Lot[]>(baseUrl + "/entreprise/" + id);
+  }
+
 }
