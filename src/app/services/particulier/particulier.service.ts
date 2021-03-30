@@ -24,8 +24,8 @@ export class ParticulierService {
     return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
   }
   
-  update(id: number, value: any): Observable<Object> {
-    return this.http.patch(`${this.baseUrl}/${id}`, value);
+  update(id: number, value: Particulier): Observable<Particulier> {
+    return this.http.put<Particulier>(`${this.baseUrl}/${id}`, value);
   }
 
   updatePassword(id: number, value: any): Observable<Object> {

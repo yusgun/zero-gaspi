@@ -11,6 +11,7 @@ import { ParticulierService } from 'src/app/services/particulier/particulier.ser
 })
 export class SecuriteComponent implements OnInit {
 
+//var confirmNewPassword: string = this.userProfile.get('confirmNewPassword').value;
   userProfile: FormGroup;
 
   constructor(private entrepriseApi: EntrepriseService, private associationApi: AssociationService, private particulierApi: ParticulierService,
@@ -28,26 +29,33 @@ export class SecuriteComponent implements OnInit {
 
 
   UpdatePasswordForEntreprise() {
-    this.entrepriseApi.updatePassword(122, Object).subscribe(data => {
+    this.entrepriseApi.updatePassword(1, String).subscribe(data => {
       console.log(data)
     },
       error => console.log(error))
   }
 
   UpdatePasswordForParticulier() {
-    this.particulierApi.updatePassword(122, Object).subscribe(data => {
+    this.particulierApi.updatePassword(148, 'confirmNewPassword').subscribe(data => {
       console.log(data)
     },
       error => console.log(error))
 
   }
   UpdatePasswordForAssociation() {
-    this.associationApi.updatePassword(122, Object).subscribe(data => {
+    this.associationApi.updatePassword(1, String).subscribe(data => {
       console.log(data)
     },
       error => console.log(error))
 
   }
 
+  onSubmit(): void {
+    console.log(this.userProfile.value);
+  }
+
+   
+
+    //   table connexion  id: 147  mail : alphonse.denis@email.com  mdp: 0123456  ,   table identite : particulier id 148 
 
 }

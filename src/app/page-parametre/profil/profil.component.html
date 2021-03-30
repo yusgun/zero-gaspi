@@ -1,32 +1,31 @@
-<!--  <h6>INFORMATIONS PERSONNELLES</h6>
+<h6>INFORMATIONS PERSONNELLES</h6>
 <hr>
 <form>
-  
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Adresse mail</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" [(ngModel)]="adresseMail" [ngModelOptions]="{standalone:true}">
-    
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" [(ngModel)]="particulier.connexion.mail" [ngModelOptions]="{standalone:true}">
+    {{particulier.connexion.mail}}
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Numéro de téléphone</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="0745152512" [(ngModel)]="numeroTelephone" [ngModelOptions]="{standalone:true}">
-    
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" [(ngModel)]="particulier.numeroTelephone" [ngModelOptions]="{standalone:true}">
+    {{particulier.numeroTelephone}}
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Rue</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="25 rue des marrons" [(ngModel)]="rue" [ngModelOptions]="{standalone:true}">
-    
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" [(ngModel)]="particulier.rue" [ngModelOptions]="{standalone:true}">
+    {{particulier.rue}}
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Ville</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Marseille" [(ngModel)]="ville" [ngModelOptions]="{standalone:true}">
-    
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" [(ngModel)]="particulier.ville" [ngModelOptions]="{standalone:true}">
+    {{particulier.ville}}
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Code Postal</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="13200" [(ngModel)]="codePostal" [ngModelOptions]="{standalone:true}">
-    
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" [(ngModel)]="particulier.codePostal" [ngModelOptions]="{standalone:true}">
+    {{particulier.codePostal}}
   </div>
-  <button (click)="" class="btn btn-outline-info" type="button">Valider</button>
+  <button (click)="UpdateForParticulier()" class="btn btn-outline-info" type="button">Valider</button>
   <button class="btn btn-outline-info" type="reset">Abandonner</button>
-</form> -->
+</form> 
