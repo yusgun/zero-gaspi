@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { EntrepriseService } from 'src/app/services/entreprise/entreprise.service';
 import { AssociationService } from 'src/app/services/association/association.service';
 import { ParticulierService } from 'src/app/services/particulier/particulier.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-parametres-du-compte',
@@ -11,7 +10,6 @@ import { Observable } from 'rxjs';
 })
 export class ParametresDuCompteComponent implements OnInit {
 
-  
 
   constructor(private entrepriseApi: EntrepriseService, private associationApi: AssociationService, private particulierApi: ParticulierService) { }
 

@@ -1,16 +1,17 @@
 <h6>PARAMÈTRES DE SÉCURITÉ</h6>
 <hr>
-<form>
+<form [formGroup]="userProfile" (ngSubmit)="UpdatePasswordForParticulier()">
     <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">
+        <label class="form-label">
             Changer de mot de passe
         </label>
-        <input type="password" class="form-control" id="exampleFormControlInput1"
-            placeholder="votre mot de passe actuel">
+        <input type="password" class="form-control" placeholder="votre mot de passe actuel" formControlName="currentPassword">
         <br>
-        <input type="password" class="form-control" id="exampleFormControlInput1"
-            placeholder="votre nouveau mot de passe">
-        <input type="password" class="form-control" id="exampleFormControlInput1"
-            placeholder="confirmer le nouveau mot de passe">
+        <input type="password" class="form-control" placeholder="votre nouveau mot de passe" formControlName="newPassword">
+        <input type="password" class="form-control" placeholder="confirmer le nouveau mot de passe" formControlName="confirmNewPassword">
+    </div>
+    <div>
+        <button type="submit">Confirmer
+        </button>
     </div>
 </form>

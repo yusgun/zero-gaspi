@@ -28,4 +28,9 @@ export class EntrepriseService {
     return this.http.patch(`${this.baseUrl}/${id}`, value);
   }
 
+  updatePassword(id: number, value: any): Observable<Object> {
+    return this.http.patch(`${this.baseUrl}/${id}`, value);
+
+  }
+
 }
