@@ -15,12 +15,20 @@ export class LotService {
   getLot() {
     return this.http.get(baseUrl);
   }
+
+  getLotById(id:number) {
+    return this.http.get<any>(`${baseUrl}/${id}`);
+  }
   create(lot: Lot) {
     return this.http.post(baseUrl, lot);
   }
 
   delete(id:number) {
     return this.http.delete(`${baseUrl}/${id}`);
+  }
+
+  update(id: number, lot:Lot) {
+    return this.http.put(`${baseUrl}/${id}`, lot);
   }
 
 }

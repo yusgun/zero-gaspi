@@ -19,13 +19,14 @@ import { NotificationComponent } from './page-parametre/notification/notificatio
 import { PageVendeurComponent } from './page-vendeur/page-vendeur.component';
 import { NavbarVendeurComponent } from './navbar-vendeur/navbar-vendeur.component';
 import { AjoutLotComponent } from './page-vendeur/ajout-lot/ajout-lot.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbdModalContent} from './modal/ngbd-modal-content/ngbd-modal-content.component';
 import { ListingFavorisComponent } from './listing-favoris/listing-favoris.component';
 import { NavigationComponent } from './page-parametre/navigation/navigation.component';
 import { BreadcrumbComponent } from './page-parametre/breadcrumb/breadcrumb.component';
 
 import { ModifLotComponent } from './page-vendeur/modif-lot/modif-lot.component';
+import { UpdateLotComponent } from './page-vendeur/update-lot/update-lot.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { ModifLotComponent } from './page-vendeur/modif-lot/modif-lot.component'
     ListingFavorisComponent,
     NavigationComponent,
     BreadcrumbComponent,
-    ModifLotComponent
+    ModifLotComponent,
+    UpdateLotComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +60,7 @@ import { ModifLotComponent } from './page-vendeur/modif-lot/modif-lot.component'
     HttpClientModule,
     NgbModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

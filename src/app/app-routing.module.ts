@@ -6,6 +6,7 @@ import { PageParametreComponent } from './page-parametre/page-parametre.componen
 import { AjoutLotComponent } from './page-vendeur/ajout-lot/ajout-lot.component';
 import { ModifLotComponent } from './page-vendeur/modif-lot/modif-lot.component';
 import { PageVendeurComponent } from './page-vendeur/page-vendeur.component';
+import { UpdateLotComponent } from './page-vendeur/update-lot/update-lot.component';
 
 const routes: Routes = [
   {path:"acheteur", component: PageAcheteurComponent, pathMatch: "full"},
@@ -13,6 +14,8 @@ const routes: Routes = [
   {path: "parametres", component: PageParametreComponent, pathMatch: "full"},
   {path: "ajout-lot", component: AjoutLotComponent, pathMatch: "full"},
   {path: "modif-lot", component: ModifLotComponent, pathMatch: "full"},
+  {path: "update-lot/:id", component: UpdateLotComponent, pathMatch: "full"},
+
 ];
 
 @NgModule({
