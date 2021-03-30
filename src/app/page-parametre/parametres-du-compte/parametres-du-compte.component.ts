@@ -22,18 +22,21 @@ export class ParametresDuCompteComponent implements OnInit {
   }
 
   DeleteAccountForEntreprise() {
+    if(window.confirm('Etes vous certain de vouloir supprimer votre compte ?'))
     this.entrepriseApi.delete(122).subscribe(data =>{
       console.log(data)},
       error => console.log(error))
   }
 
   DeleteAccountForAssociation() {
+    if(window.confirm('Etes vous certain de vouloir supprimer votre compte ?'))
     this.associationApi.delete(122).subscribe(data =>{
       console.log(data)},
       error => console.log(error))
   }
   
   DeleteAccountForParticulier() {
+    if(window.confirm('Etes vous certain de vouloir supprimer votre compte ?'))
     this.particulierApi.delete(152).subscribe(data =>{
       console.log(data)},
       error => console.log(error))
