@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Association } from "../association";
+import { Association } from 'src/app/models/association';
+import { Connexion } from 'src/app/models/connexion';
 
 
 @Injectable({
@@ -8,5 +9,24 @@ import { Association } from "../association";
 })
 export class AssociationService {
 
-  constructor(private http: HttpClient) { }
+  association: Association = {
+    id: 11,
+    type_commande: "don",
+    numeroTelephone: "0606060606",
+    rue: "7 rue des villas",
+    codePostal: "59000",
+    nom: "Nom",
+    prenom: "Prenom",
+    connexion: 1,
+    perimetre: 0,
+    libelle: "rien",
+    numero: "100000000" // numero RNA
+  };
+
+  constructor(private http: HttpClient) { 
+  }
+
+  getAssociation(){
+    return this.association;
+  }
 }
