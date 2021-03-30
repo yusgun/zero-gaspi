@@ -12,8 +12,7 @@ import { Particulier } from 'src/app/models/particulier';
 })
 export class ProfilComponent implements OnInit {
 
-
-
+  
   constructor(private entrepriseApi: EntrepriseService, private associationApi: AssociationService, private particulierApi: ParticulierService) { }
 
 
