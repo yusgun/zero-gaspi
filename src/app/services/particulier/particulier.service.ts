@@ -28,8 +28,8 @@ export class ParticulierService {
     return this.http.put<Particulier>(`${this.baseUrl}/${id}`, value);
   }
 
-  updatePassword(id: number, value: any): Observable<Object> {
-    return this.http.patch(`${this.baseUrl}/${id}`, value);
+  updatePassword(id: number, value: any): Observable<any> {
+    return this.http.put<any>(`${this.baseUrl}/${id}`, value);
 
   }
 

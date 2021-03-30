@@ -11,7 +11,7 @@
         <input type="password" class="form-control" placeholder="confirmer le nouveau mot de passe" formControlName="confirmNewPassword">
     </div>
     <div>
-        <button type="submit">Confirmer
+        <button [disabled]="!userProfile.valid" type="submit">Confirmer
         </button>
     </div>
 </form>

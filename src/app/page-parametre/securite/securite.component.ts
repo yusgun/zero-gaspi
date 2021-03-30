@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { AbstractControlOptions, FormBuilder, FormControl, FormGroup, Validators,  } from '@angular/forms';
 import { EntrepriseService } from 'src/app/services/entreprise/entreprise.service';
 import { AssociationService } from 'src/app/services/association/association.service';
 import { ParticulierService } from 'src/app/services/particulier/particulier.service';
@@ -11,7 +11,7 @@ import { ParticulierService } from 'src/app/services/particulier/particulier.ser
 })
 export class SecuriteComponent implements OnInit {
 
-//var confirmNewPassword: string = this.userProfile.get('confirmNewPassword').value;
+
   userProfile: FormGroup;
 
   constructor(private entrepriseApi: EntrepriseService, private associationApi: AssociationService, private particulierApi: ParticulierService,
@@ -19,29 +19,22 @@ export class SecuriteComponent implements OnInit {
 
     this.userProfile = this.fb.group({
       currentPassword: [''],
-      newPassword: [''],
-      confirmNewPassword: ['']
+      newPassword: new FormControl(null, [ Validators.required]),
+      confirmNewPassword: new FormControl(null, [Validators.required])
     });
    }
 
   ngOnInit(): void {
   }
 
-
-  UpdatePasswordForEntreprise() {
-    this.entrepriseApi.updatePassword(1, String).subscribe(data => {
-      console.log(data)
-    },
-      error => console.log(error))
-  }
-
   UpdatePasswordForParticulier() {
-    this.particulierApi.updatePassword(148, 'confirmNewPassword').subscribe(data => {
+    this.particulierApi.updatePassword(148, this.userProfile.value.confirmNewPassword).subscribe(data => {
       console.log(data)
     },
       error => console.log(error))
 
   }
+
   UpdatePasswordForAssociation() {
     this.associationApi.updatePassword(1, String).subscribe(data => {
       console.log(data)
@@ -50,12 +43,19 @@ export class SecuriteComponent implements OnInit {
 
   }
 
-  onSubmit(): void {
-    console.log(this.userProfile.value);
+  UpdatePasswordForEntreprise() {
+    this.entrepriseApi.updatePassword(1, String).subscribe(data => {
+      console.log(data)
+    },
+      error => console.log(error))
   }
 
-   
-
-    //   table connexion  id: 147  mail : alphonse.denis@email.com  mdp: 0123456  ,   table identite : particulier id 148 
-
+ 
+  Comparaison() {
+  let newPassword: string = this.userProfile.get('newPassword').value
+  let confirmNewPassword: string = this.userProfile.get('confirmNewPassword').value
+  if (newPassword !== confirmNewPassword) {
+    this.userProfile.get('confirmNewPassword').setErrors({ NoPassswordMatch: true });
+  }
+}
 }
