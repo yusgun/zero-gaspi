@@ -4,31 +4,35 @@
         <div class="row text-black">
             <div class="col-xl-5 col-lg-5 col-md-8 col-sm-10 mx-auto text-center form p-4">
                 <h1 class="display-4 py-2 text-truncate">Ajouter des lots</h1>
-                <form class="justify-content-center" (ngSubmit)='create()'>
+                <form class="justify-content-center" (ngSubmit)='create()' [formGroup]="lotForm">
                     <div class="form-field">
                         <label>Lots à disposition</label>
-                        <input type="number" [(ngModel)]="lot.nblot" [ngModelOptions]="{standalone: true}"
-                            class="form-control" name="nblot" id="nblot"
+                        <input type="number" 
+                            class="form-control" name="nblot" id="nblot" formControlName="nblot"
                             placeholder="Combien de lots souhaitez-vous ajouter ?" required>
+
                     </div>
                     <div class="form-field">
                         <label for="exampleFormControlTextarea1">Descriptif du lot</label>
-                        <textarea class="form-control" [(ngModel)]="lot.description"
-                            [ngModelOptions]="{standalone: true}" id="exampleFormControlTextarea1" rows="3"
-                            placeholder="Description de votre lot" required></textarea>
+                        <textarea class="form-control" required minlength="4"  id="exampleFormControlTextarea1"
+                            formControlName="description" rows="3" placeholder="Description de votre lot"></textarea>
                     </div>
                     <div class="form-field">
                         <label>Libelle</label>
-                        <input type="text" [(ngModel)]="lot.libelle" [ngModelOptions]="{standalone: true}"
-                            class="form-control" name="libelle" id="libelle"
+                        <input type="text"
+                            class="form-control" name="libelle" id="libelle" formControlName="libelle"
                             placeholder="Combien de lots souhaitez-vous ajouter ?" required>
                     </div>
                     <div class="form-field">
-                        <button type="submit" class="btn btn-success">Confirmer</button>
+                        <button type="submit" class="btn btn-success btnconfirmer" [disabled]="!lotForm.valid">Confirmer</button>
                     </div>
-                    <p>{{ statut }}</p>
+
+                    <button type="button" class="btn btn-danger btn-lg btnretour"
+                        [routerLink]="['../vendeur']">Retour</button>
+
+                    <p>{{statut}}</p>
+
                 </form>
-                <button type="button" class="btn btn-danger btn-lg btnretour" [routerLink] ="['../vendeur']">Retour</button>
             </div>
         </div>
     </div>

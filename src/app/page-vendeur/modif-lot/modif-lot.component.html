@@ -11,14 +11,14 @@
     <tr>
       <th>Nom du lot</th>
       <th>Description du lot</th>
-      <th>Supprimer le lot</th>
+      <th>Modifier / Supprimer le lot</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let lot of lots">
       <td>{{lot.libelle}}</td>
       <td>{{lot.description}}</td>
-      <button (click)='deleteLot(lot.id)'> <i class="fas fa-exchange-alt"></i></button> &nbsp;
+      <button (click)='getLotById(lot.id)' [routerLink] ="['/update-lot',lot.id]"> <i class="fas fa-exchange-alt"></i></button> &nbsp;
       <button (click)='deleteLot(lot.id)'> <i class="fas fa-times"></i> </button>
     </tr>
     <tbody>

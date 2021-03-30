@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { tap } from 'rxjs/operators';
 import { Lot } from 'src/app/models/lot';
 import { LotService } from 'src/app/services/lot.service';
 
@@ -10,6 +11,7 @@ import { LotService } from 'src/app/services/lot.service';
 export class ModifLotComponent implements OnInit {
 
     lots:Lot[] = [{
+    id:0,
     nblot: null,
     description: '',
     libelle: '',
@@ -29,11 +31,24 @@ export class ModifLotComponent implements OnInit {
   }
 
   deleteLot(id:number) {
+    if(window.confirm('Etes vous certain de vouloir supprimer ?'))
     this.lotApi.delete(id).subscribe(data => {
       this.lotApi.getLot().subscribe((lots: Lot[])=>{
         this.lots = lots;
     })
     });
+  }
+
+  getLotById(id:number) {
+   return this.lotApi.getLotById(id).subscribe(data =>
+    console.log(data), 
+    error => console.log(error));
+  }
+
+  modifLot(lot : Lot) {
+this.lotApi.update(lot.id,lot).subscribe(data =>
+   console.log(data), 
+   error => console.log(error));
   }
 
 

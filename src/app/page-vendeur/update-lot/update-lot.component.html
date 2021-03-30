@@ -1,0 +1,35 @@
+<app-navbar-vendeur></app-navbar-vendeur>
+<section class="min-vh-100">
+    <div class="container">
+        <div class="row text-black">
+            <div class="col-xl-5 col-lg-5 col-md-8 col-sm-10 mx-auto text-center form p-4">
+                <h1 class="display-4 py-2 text-truncate">Modifier le lot</h1>
+                <form class="justify-content-center">
+                    <div class="form-field">
+                        <label for="exampleFormControlTextarea1">Id du lot</label>
+                        <input class="form-control" [(ngModel)]="lot.id"  readonly name="id" ngDefaultControl
+                            [ngModelOptions]="{standalone: true}" id="id" rows="3"
+                            placeholder="Description de votre lot" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="exampleFormControlTextarea1">Descriptif du lot</label>
+                        <textarea class="form-control" [(ngModel)]="lot.description" name="description" ngDefaultControl
+                            [ngModelOptions]="{standalone: true}" id="description" rows="3"
+                            placeholder="Description de votre lot" required></textarea>
+                    </div>
+                    <div class="form-field">
+                        <label>Libelle</label>
+                        <input type="text" [(ngModel)]="lot.libelle"
+                        [ngModelOptions]="{standalone: true}"
+                            class="form-control" name="libelle" id="libelle" ngDefaultControl
+                            placeholder="Combien de lots souhaitez-vous ajouter ?" required>
+                    </div>
+                    <div class="form-field">
+                        <button type="submit" class="btn btn-success btnconfirmer" (click)='modifLot(lot)'>Confirmer</button>
+                    </div>
+                </form>
+                <button type="button" class="btn btn-danger btn-lg btnretour" [routerLink] ="['/modif-lot']">Retour</button>
+            </div>
+        </div>
+    </div>
+</section>

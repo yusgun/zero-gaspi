@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgbdModalContent } from 'src/app/modal/ngbd-modal-content/ngbd-modal-content.component';
 import { Lot } from 'src/app/models/lot';
@@ -13,29 +14,34 @@ import { LotService } from 'src/app/services/lot.service';
 export class AjoutLotComponent implements OnInit {
 
   statut: string = "";
-  
 
-  lot: Lot = {
-    nblot: null,
-    description: '',
-    libelle: '',
-    prixlot: 5,
-    entreprise_id: null
-  }
+
+  lotForm = new FormGroup({
+    nblot: new FormControl('', [Validators.required]),
+    description: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    libelle: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    prixlot: new FormControl(''),
+    entreprise_id: new FormControl('')
+  })
 
   baseUrl: string = 'http://localhost:8080/lot';
 
-  constructor(private lotApi: LotService, private modalService: NgbModal) { }
+
+  constructor(private lotApi: LotService) { }
 
   ngOnInit(): void {
   }
+
   create() {
-    console.log(this.lot);
-    
-    this.lotApi.create(this.lot).subscribe(resp=>console.log(resp))
-    error => {
-      console.log(error);
-    };
+    if (this.lotForm.valid) {
+      console.log(this.lotForm.value);
+      this.statut = "Ajout ok";
+      this.lotApi.create(this.lotForm.value).subscribe(resp => console.log(resp))
+      error => {
+        console.log(error);
+      };
+    }
   }
-}5
+}
+
 

@@ -1,4 +1,5 @@
 export interface Lot {
+    id?:number,
     nblot: number,
     description:string,
     libelle:string,
