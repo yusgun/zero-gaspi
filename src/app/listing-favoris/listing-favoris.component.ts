@@ -21,11 +21,6 @@ export class ListingFavorisComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  refresh(){
-    this.favorisApi.getByClient(11);
-  }
-
-
   informationEntreprise(entreprise: Entreprise) {
     const modalRef = this.modalService.open(NgbdModalContent);
     modalRef.componentInstance.body = `
@@ -56,7 +51,7 @@ export class ListingFavorisComponent implements OnInit {
   }
 
   supprimerFavori(idEntreprise: number) {
-    this.favorisApi.deleteByIds(11, idEntreprise).subscribe(null);
+    this.favorisApi.deleteByIds(11, idEntreprise);
   }
 
 }

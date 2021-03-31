@@ -19,7 +19,6 @@ export class FavorisService {
 
   create(favoris: Favoris) {
     this.http.post<any[]>('http://localhost:8080/favoris', favoris, { observe: 'response' }).subscribe((resp) => {
-      console.log("service create => " ,{resp});
       this.getByClient(11);
     }, (err) => {
       console.error(err);
@@ -27,7 +26,11 @@ export class FavorisService {
   }
 
   deleteByIds(idClient: number, idEntreprise: number) {
-    return this.http.delete("http://localhost:8080/favoris/client/" + idClient + "/entreprise/" + idEntreprise);
+    this.http.delete("http://localhost:8080/favoris/client/" + idClient + "/entreprise/" + idEntreprise, { observe: 'response' }).subscribe((resp) => {
+      this.getByClient(11);
+    }, (err) => {
+      console.error(err);
+    });
   }
 
   getByClient(client: number) {
