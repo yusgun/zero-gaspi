@@ -1,5 +1,3 @@
-import { Connexion } from "./connexion";
-
 export interface Association {
     id?: number,
     type_commande?: string,

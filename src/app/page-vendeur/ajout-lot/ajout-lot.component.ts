@@ -17,8 +17,8 @@ export class AjoutLotComponent implements OnInit {
 
 
   lotForm = new FormGroup({
-    nblot: new FormControl('', [Validators.required]),
-    description: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    nblot: new FormControl('', [Validators.required, Validators.min(1), Validators.max(5)]),
+    description: new FormControl('', [Validators.required, Validators.minLength(4)]),
     libelle: new FormControl('', [Validators.required, Validators.minLength(2)]),
     prixlot: new FormControl(''),
     entreprise_id: new FormControl('')
@@ -33,13 +33,17 @@ export class AjoutLotComponent implements OnInit {
   }
 
   create() {
-    if (this.lotForm.valid) {
-      console.log(this.lotForm.value);
-      this.statut = "Ajout ok";
-      this.lotApi.create(this.lotForm.value).subscribe(resp => console.log(resp))
-      error => {
-        console.log(error);
-      };
+    let i: number = 0;
+
+    for (i = 0; i < this.lotForm.value.nblot; i++) {
+      if (this.lotForm.valid) {
+        console.log(this.lotForm.value);
+        this.statut = "Ajout ok";
+        this.lotApi.create(this.lotForm.value).subscribe(resp => console.log(resp))
+        error => {
+          console.log(error);
+        };
+      }
     }
   }
 }

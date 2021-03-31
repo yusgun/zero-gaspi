@@ -7,30 +7,35 @@
                 <form class="justify-content-center" (ngSubmit)='create()' [formGroup]="lotForm">
                     <div class="form-field">
                         <label>Lots à disposition</label>
-                        <input type="number" 
-                            class="form-control" name="nblot" id="nblot" formControlName="nblot"
+                        <input type="number" class="form-control" name="nblot" id="nblot" formControlName="nblot"
                             placeholder="Combien de lots souhaitez-vous ajouter ?" required>
-
+                        <p class="errors"
+                            *ngIf="lotForm.get('nblot').hasError('required') || lotForm.get('nblot').hasError('min') || lotForm.get('nblot').hasError('max')"> Le nombre de lots est requis. (1 lot minimum , 5 maximum)
+                        </p>
                     </div>
                     <div class="form-field">
                         <label for="exampleFormControlTextarea1">Descriptif du lot</label>
-                        <textarea class="form-control" required minlength="4"  id="exampleFormControlTextarea1"
+                        <textarea class="form-control" required minlength="4" id="exampleFormControlTextarea1"
                             formControlName="description" rows="3" placeholder="Description de votre lot"></textarea>
+                            <p class="errors"
+                            *ngIf="lotForm.get('description').hasError('required') || lotForm.get('description').hasError('minlength')"> La description de votre lot est obligatoire. (4 caractères minimum)
+                        </p>
                     </div>
                     <div class="form-field">
                         <label>Libelle</label>
-                        <input type="text"
-                            class="form-control" name="libelle" id="libelle" formControlName="libelle"
+                        <input type="text" class="form-control" name="libelle" id="libelle" formControlName="libelle"
                             placeholder="Combien de lots souhaitez-vous ajouter ?" required>
+                            <p class="errors"
+                            *ngIf="lotForm.get('libelle').hasError('required') || lotForm.get('libelle').hasError('minlength')"> Le nom de votre lot est obligatoire. (2 caractères minimum)
+                        </p>
                     </div>
                     <div class="form-field">
-                        <button type="submit" class="btn btn-success btnconfirmer" [disabled]="!lotForm.valid">Confirmer</button>
+                        <button type="submit" class="btn btn-success btnconfirmer"
+                            [disabled]="!lotForm.valid">Confirmer</button>
                     </div>
 
                     <button type="button" class="btn btn-danger btn-lg btnretour"
                         [routerLink]="['../vendeur']">Retour</button>
-
-                    <p>{{statut}}</p>
 
                 </form>
             </div>

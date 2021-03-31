@@ -31,7 +31,7 @@ export class ModifLotComponent implements OnInit {
   }
 
   deleteLot(id:number) {
-    if(window.confirm('Etes vous certain de vouloir supprimer ?'))
+    if(window.confirm('Etes vous certain de vouloir supprimer ce lot ?'))
     this.lotApi.delete(id).subscribe(data => {
       this.lotApi.getLot().subscribe((lots: Lot[])=>{
         this.lots = lots;
