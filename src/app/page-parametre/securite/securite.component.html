@@ -7,7 +7,12 @@
         </label>
         <input type="password" class="form-control" placeholder="votre mot de passe actuel" formControlName="currentPassword">
         <br>
-        <input type="password" class="form-control" placeholder="votre nouveau mot de passe" formControlName="newPassword">
+        <input type="password" class="form-control" placeholder="votre nouveau mot de passe" formControlName="newPassword"
+        [ngClass]="{'is-invalid':userProfile.get('newPassword').touched && userProfile.get('newPassword').invalid}" />
+        <div *ngIf="userProfile.get('newPassword').touched && userProfile.get('newPassword').invalid"  class="invalid-feedback">
+          <div *ngIf="userProfile.get('newPassword').errors.minlength">Au moins 6 caractères sont requis !</div>
+        </div>
+
         <input type="password" class="form-control" placeholder="confirmer le nouveau mot de passe" formControlName="confirmNewPassword">
     </div>
     <div>

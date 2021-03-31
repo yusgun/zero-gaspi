@@ -23,15 +23,15 @@ export class ProfilComponent implements OnInit {
   particulier: Particulier = {
     id: 148,
     numeroTelephone: '0621245120',
-    rue: 'rue bidule ',
-    codePostal: '59200',
-    ville: 'troug',
-    nom: 'jdd',
-    prenom: 'pdgg',
+    rue: 'rue de lille ',
+    codePostal: '59000',
+    ville: 'Lille',
+    nom: 'Dupont',
+    prenom: 'Axel',
     libelle: 'machin',
     connexion: {
       id: 1,
-      mail: 'biell.@ldl.com',
+      mail: 'bilel.@outlook.com',
       motDePasse: 'admin12224548Password'
     },
     type_identite: "particulier"
