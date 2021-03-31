@@ -15,7 +15,7 @@ export class UpdateLotComponent implements OnInit {
     description: '',
     libelle: '',
     prixlot: 5,
-    entreprise_id: null
+    entreprise: null
   }
 
 

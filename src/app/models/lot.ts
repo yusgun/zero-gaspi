@@ -4,5 +4,5 @@ export interface Lot {
     description:string,
     libelle:string,
     prixlot?:number,
-    entreprise_id:any
+    entreprise:any
 }

@@ -21,7 +21,9 @@ export class AjoutLotComponent implements OnInit {
     description: new FormControl('', [Validators.required, Validators.minLength(4)]),
     libelle: new FormControl('', [Validators.required, Validators.minLength(2)]),
     prixlot: new FormControl(''),
-    entreprise_id: new FormControl('')
+    entreprise: new FormGroup({
+      id: new FormControl(4)
+    })
   })
 
   baseUrl: string = 'http://localhost:8080/lot';

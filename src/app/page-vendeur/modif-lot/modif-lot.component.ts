@@ -16,7 +16,7 @@ export class ModifLotComponent implements OnInit {
     description: '',
     libelle: '',
     prixlot: 5,
-    entreprise_id: null
+    entreprise: null
   }]
 
    baseUrl: string = 'http://localhost:8080/lot';
