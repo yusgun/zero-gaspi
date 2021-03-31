@@ -39,7 +39,7 @@ export class LineCardComponent implements OnInit {
       },
       entreprise: entreprise
     }
-    favoris = this.favorisService.create(favoris);
+    /*favoris = */this.favorisService.create(favoris);
   }
 
   informationEntreprise(entreprise: Entreprise){

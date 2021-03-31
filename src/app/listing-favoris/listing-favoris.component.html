@@ -1,8 +1,10 @@
-<div class="card mt-1" style="min-height: 20vh;">
+<div class="card mt-1" style="min-height: 20vh;max-height: 50vh;">
     <div class="card-body">
         <h5 class="card-title">Entreprises favorites</h5>
     </div>
-    <ul class="list-group list-group-flush" *ngFor="let favori of favoris">
-        <li class="list-group-item"><span class="lienModal" (click)="informationEntreprise(favori)">{{ favori.nom }}</span><i (click)="supprimerFavori(favori.id)" class="fas fa-times"></i></li>
-    </ul>
+    <div *ngIf="favoris.length > 0">
+        <ul class="list-group list-group-flush" *ngFor="let favori of favoris">
+            <li class="list-group-item"><span class="lienModal" (click)="informationEntreprise(favori)">{{ favori.nom }}</span><i (click)="supprimerFavori(favori.id)" class="fas fa-times"></i></li>
+        </ul>
+    </div>
 </div>

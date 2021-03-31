@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { HighlightSpanKind } from 'typescript';
 import { NgbdModalContent } from '../modal/ngbd-modal-content/ngbd-modal-content.component';
 import { Entreprise } from '../models/Entreprise';
 import { FavorisService } from '../services/favoris/favoris.service';
@@ -11,24 +12,19 @@ import { FavorisService } from '../services/favoris/favoris.service';
 })
 export class ListingFavorisComponent implements OnInit {
 
-  favoris: Entreprise[] = [];
+  @Input() favoris: any[] = [];
 
-  constructor(private favorisApi: FavorisService, private modalService: NgbModal) { }
+  constructor(private favorisApi: FavorisService, private modalService: NgbModal) {
+
+  }
 
   ngOnInit(): void {
-    this.favorisApi.getByClient(11).subscribe((data: Entreprise[]) => {
-      data.forEach(element => {
-        this.favoris.push({
-          nom: element[0],
-          ville: element[1],
-          codePostal: element[2],
-          numTel: element[3],
-          adresse: element[4],
-          id: element[5]
-        })
-      })
-    })
   }
+
+  refresh(){
+    this.favorisApi.getByClient(11);
+  }
+
 
   informationEntreprise(entreprise: Entreprise) {
     const modalRef = this.modalService.open(NgbdModalContent);
@@ -59,7 +55,7 @@ export class ListingFavorisComponent implements OnInit {
     modalRef.componentInstance.titre = "Informations concernant " + entreprise.nom;
   }
 
-  supprimerFavori(idEntreprise:number){
+  supprimerFavori(idEntreprise: number) {
     this.favorisApi.deleteByIds(11, idEntreprise).subscribe(null);
   }
 

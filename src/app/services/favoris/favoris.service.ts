@@ -1,29 +1,44 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+import { Entreprise } from 'src/app/models/Entreprise';
 
 import { Favoris } from 'src/app/models/Favoris';
+import { entrepriseMapping } from '../entreprise/entreprise.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FavorisService {
 
-  constructor(private http:HttpClient) { }
+  private favSubject = new Subject<any>();
+
+  favObservable = this.favSubject.asObservable();
+
+  constructor(private http: HttpClient) { }
 
   create(favoris: Favoris) {
-    let result: any;
-    this.http.post('http://localhost:8080/favoris', favoris).subscribe((data)=>{
-      result = data;
+    this.http.post<any[]>('http://localhost:8080/favoris', favoris, { observe: 'response' }).subscribe((resp) => {
+      console.log("service create => " ,{resp});
+      this.getByClient(11);
+    }, (err) => {
+      console.error(err);
     });
-    return result;
   }
 
-  deleteByIds(idClient:number, idEntreprise: number){
-    return this.http.delete("http://localhost:8080/favoris/client/"+idClient+"/entreprise/"+idEntreprise);
+  deleteByIds(idClient: number, idEntreprise: number) {
+    return this.http.delete("http://localhost:8080/favoris/client/" + idClient + "/entreprise/" + idEntreprise);
   }
 
-  getByClient(client:number){
-    // return Observable qui contient la reponse du serveur (ici une entreprise)
-    return this.http.get("http://localhost:8080/favoris/findby/client/"+client);
+  getByClient(client: number) {
+    this.http.get<any[]>("http://localhost:8080/favoris/findby/client/" + client).subscribe((fav: any[]) => {
+      let tab : Entreprise[] = [];
+      if(fav){
+        fav.forEach(element => {
+          tab.push(entrepriseMapping(element));
+        })
+      }
+      this.favSubject.next(tab);
+    })
   }
 }
