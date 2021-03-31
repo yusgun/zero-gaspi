@@ -1,3 +1,4 @@
+<div class="container-fluid">
 <div class="d-flex">
     <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
         <li ngbNavItem="profil-item">
@@ -33,6 +34,7 @@
     </ul>
 
     <div [ngbNavOutlet]="nav" class="ml-4"></div>
+</div>
 </div>
 
 <pre>Active: {{ active }}</pre>
