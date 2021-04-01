@@ -1,12 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Entreprise } from '../../models/Entreprise';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
+import { MapService } from '../map/map.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EntrepriseService {
+
+  private entSubject = new Subject<any>();
+
+  entObservable = this.entSubject.asObservable();
 
   entreprise: Entreprise = {
     nom: "Michel Antony",
@@ -17,7 +22,7 @@ export class EntrepriseService {
     id: 12
   }
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private mapService: MapService) { }
 
   getEntrepriseBySearch(search: string): Entreprise[] {
     let entreprises: Entreprise[] = [];
@@ -28,6 +33,7 @@ export class EntrepriseService {
         tmp.forEach(element => {
           entreprises.push(entrepriseMapping(element));
         })
+        this.entSubject.next(entreprises);
       });
     }
     return entreprises;
@@ -57,14 +63,15 @@ export class EntrepriseService {
   }
 
 }
-
-export const entrepriseMapping = (element: any[]): Entreprise =>{
+export const entrepriseMapping = (element: any[]) => {
   return {
     nom: element[0],
     ville: element[1],
     codePostal: element[2],
     numTel: element[3],
     adresse: element[4],
-    id: element[5]
-  }
+    id: element[5],
+    latitude: 50.645762,
+    longitude: 2.986056
+  };
 }
