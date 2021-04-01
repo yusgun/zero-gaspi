@@ -40,13 +40,14 @@ export class AjoutLotComponent implements OnInit {
     for (i = 0; i < this.lotForm.value.nblot; i++) {
       if (this.lotForm.valid) {
         console.log(this.lotForm.value);
-        this.statut = "Ajout ok";
         this.lotApi.create(this.lotForm.value).subscribe(resp => console.log(resp))
         error => {
           console.log(error);
         };
       }
     }
+    this.statut = "L'ajout de votre lot est effectué."
+    this.lotForm.reset();
   }
 }
 

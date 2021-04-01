@@ -22,9 +22,9 @@
                         </p>
                     </div>
                     <div class="form-field">
-                        <label>Libelle</label>
+                        <label>Nom du lot</label>
                         <input type="text" class="form-control" name="libelle" id="libelle" formControlName="libelle"
-                            placeholder="Combien de lots souhaitez-vous ajouter ?" required>
+                            placeholder="Nom de votre lot" required>
                             <p class="errors"
                             *ngIf="lotForm.get('libelle').hasError('required') || lotForm.get('libelle').hasError('minlength')"> Le nom de votre lot est obligatoire. (2 caractères minimum)
                         </p>
@@ -36,6 +36,8 @@
 
                     <button type="button" class="btn btn-danger btn-lg btnretour"
                         [routerLink]="['../vendeur']">Retour</button>
+
+                        <p class="msgajoutlotok">{{ statut }}</p>
 
                 </form>
             </div>
