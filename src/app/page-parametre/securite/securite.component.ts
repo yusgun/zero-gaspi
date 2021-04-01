@@ -20,7 +20,7 @@ export class SecuriteComponent implements OnInit {
 
     this.userProfile = this.fb.group({
       currentPassword: [''],
-      newPassword: new FormControl(null, [Validators.required, Validators.minLength(6)]),
+      newPassword: new FormControl(null, [Validators.required, Validators.minLength(8)]),
       confirmNewPassword: new FormControl(null, [Validators.required])
     }, {
       validator: this.MustMatch('newPassword', 'confirmNewPassword')
