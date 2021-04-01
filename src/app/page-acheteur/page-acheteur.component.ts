@@ -27,6 +27,9 @@ export class PageAcheteurComponent implements OnInit {
 
   getSearch(): void {
     this.entreprises = this.entrepriseApi.getEntrepriseBySearch(this.search);
+    this.entreprises.forEach(entreprise => {
+      this.mapApi.addInMap(entreprise);
+    })
   }
 
   getFavoris(): void {

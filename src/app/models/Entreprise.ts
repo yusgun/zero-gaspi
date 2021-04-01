@@ -4,5 +4,7 @@ export interface Entreprise {
     codePostal: string,
     numTel: string,
     adresse: string,
-    id: number
+    id: number,
+    latitude?: number,
+    longitude?: number
 }
