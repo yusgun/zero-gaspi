@@ -15,6 +15,9 @@ import { NavbarVendeurComponent } from './navbar-vendeur/navbar-vendeur.componen
 import { HistoriqueComponent } from './page-acheteur/historique/historique.component';
 import {  MatTableModule } from '@angular/material/table';
 import {  MatPaginatorModule } from '@angular/material/paginator';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatPaginatorIntl } from '@angular/material/paginator';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,7 @@ import {  MatPaginatorModule } from '@angular/material/paginator';
     PageVendeurComponent,
     NavbarVendeurComponent,
     HistoriqueComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,10 @@ import {  MatPaginatorModule } from '@angular/material/paginator';
     FontAwesomeModule,
     HttpClientModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    BrowserAnimationsModule,
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
