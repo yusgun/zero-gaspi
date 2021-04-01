@@ -7,8 +7,11 @@ import { AjoutLotComponent } from './page-vendeur/ajout-lot/ajout-lot.component'
 import { ModifLotComponent } from './page-vendeur/modif-lot/modif-lot.component';
 import { PageVendeurComponent } from './page-vendeur/page-vendeur.component';
 import { UpdateLotComponent } from './page-vendeur/update-lot/update-lot.component';
+import { HistoriqueComponent } from './page-acheteur/historique/historique.component';
+
 
 const routes: Routes = [
+  {path:"acheteur/historique", component: HistoriqueComponent, pathMatch: "full"},
   {path:"acheteur", component: PageAcheteurComponent, pathMatch: "full"},
   {path:"vendeur", component: PageVendeurComponent, pathMatch: "full"},
   {path: "parametres", component: PageParametreComponent, pathMatch: "full"},

@@ -14,6 +14,7 @@ export class ListingCardComponent implements OnInit {
 
   @Input() entreprises: Entreprise[];
   
+
   ngOnInit(): void {
 
   }

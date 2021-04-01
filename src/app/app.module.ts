@@ -27,6 +27,10 @@ import { BreadcrumbComponent } from './page-parametre/breadcrumb/breadcrumb.comp
 import { ModifLotComponent } from './page-vendeur/modif-lot/modif-lot.component';
 import { ModalAchatComponent } from './modal/modal-achat/modal-achat.component';
 import { UpdateLotComponent } from './page-vendeur/update-lot/update-lot.component';
+import { HistoriqueComponent } from './page-acheteur/historique/historique.component';
+import {  MatTableModule } from '@angular/material/table';
+import {  MatPaginatorModule } from '@angular/material/paginator';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -52,16 +56,22 @@ import { UpdateLotComponent } from './page-vendeur/update-lot/update-lot.compone
     BreadcrumbComponent,
     ModifLotComponent,
     ModalAchatComponent,
-    UpdateLotComponent
+    UpdateLotComponent,
+    HistoriqueComponent
   ],
   imports: [
+    MatTableModule,
+    MatPaginatorModule,
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

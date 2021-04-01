@@ -11,13 +11,15 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~11.1.2",
+    "@angular/animations": "^11.2.7",
+    "@angular/cdk": "^11.2.6",
     "@angular/common": "~11.1.2",
     "@angular/compiler": "~11.1.2",
     "@angular/core": "~11.1.2",
     "@angular/forms": "~11.1.2",
     "@angular/localize": "~11.1.2",
-    "@angular/platform-browser": "~11.1.2",
+    "@angular/material": "^11.2.7",
+    "@angular/platform-browser": "^11.1.2",
     "@angular/platform-browser-dynamic": "~11.1.2",
     "@angular/router": "~11.1.2",
     "@fortawesome/angular-fontawesome": "^0.8.2",
@@ -30,7 +32,7 @@
     "leaflet": "^1.7.1",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
-    "tslib": "^2.0.0",
+    "tslib": "^2.1.0",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
@@ -50,6 +52,6 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.1.2"
+    "typescript": "^4.1.5"
   }
 }
