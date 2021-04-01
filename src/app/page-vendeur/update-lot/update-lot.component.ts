@@ -10,6 +10,8 @@ import { LotService } from 'src/app/services/lot.service';
 })
 export class UpdateLotComponent implements OnInit {
 
+  statutdescription = "";
+  statutlibelle = "";
   lot: Lot = {
     nblot: null,
     description: '',
@@ -30,11 +32,19 @@ export class UpdateLotComponent implements OnInit {
   }
 
   modifLot(lot : Lot) {
+    if(lot.description.length >= 4 && lot.libelle.length >= 4) { 
     this.lotApi.update(lot.id,lot).subscribe(data =>{
        console.log(data)
        this.router.navigateByUrl('modif-lot')
       }, 
        error => console.log(error));
       }
+      else if(this.lot.description.length< 4) {
+        this.statutdescription = "La description de votre lot doit contenir au moins 4 caractères."
+      }
+      else if(this.lot.libelle.length <4) {
+        this.statutlibelle = " Le nom de votre lot doit contenir au minimum 2 caractères"
+      }
+    }
 
 }

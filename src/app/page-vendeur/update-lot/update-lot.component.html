@@ -6,7 +6,7 @@
                 <h1 class="display-4 py-2 text-truncate">Modifier le lot</h1>
                 <form class="justify-content-center">
                     <div class="form-field">
-                        <label for="exampleFormControlTextarea1">Identifiant du lot</label>
+                        <label for="exampleFormControlTextarea1">Id du lot</label>
                         <input class="form-control" [(ngModel)]="lot.id"  readonly name="id" ngDefaultControl
                             [ngModelOptions]="{standalone: true}" id="id" rows="3"
                             placeholder="Description de votre lot" required>
@@ -14,8 +14,9 @@
                     <div class="form-field">
                         <label for="exampleFormControlTextarea1">Descriptif du lot</label>
                         <textarea class="form-control" [(ngModel)]="lot.description" name="description" ngDefaultControl
-                            [ngModelOptions]="{standalone: true}" id="description" rows="3"
+                            [ngModelOptions]="{standalone: true}" id="description" rows="3" minlength="4"
                             placeholder="Description de votre lot" required></textarea>
+                            <p class="errors">{{statutdescription}}</p>
                     </div>
                     <div class="form-field">
                         <label>Libelle</label>
@@ -23,6 +24,7 @@
                         [ngModelOptions]="{standalone: true}"
                             class="form-control" name="libelle" id="libelle" ngDefaultControl
                             placeholder="Combien de lots souhaitez-vous ajouter ?" required>
+                            <p class="errors">{{statutlibelle}}</p>
                     </div>
                     <div class="form-field">
                         <button type="submit" class="btn btn-success btnconfirmer" (click)='modifLot(lot)'>Confirmer</button>

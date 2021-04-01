@@ -5,3 +5,7 @@
 .btnconfirmer {
     margin: 3vh;
 }
+
+.errors {
+    color: red;
+}
