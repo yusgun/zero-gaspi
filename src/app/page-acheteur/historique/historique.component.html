@@ -29,7 +29,7 @@
 
       <ng-container matColumnDef="dateEnvoie">
         <th mat-header-cell *matHeaderCellDef>Date de commande </th>
-        <td mat-cell *matCellDef="let post"> {{post.dateEnvoie}} </td>
+        <td mat-cell *matCellDef="let post"> {{post.dateEnvoie | date : 'dd/MM/yyyy'}} </td>
       </ng-container>
 
       <ng-container matColumnDef="dateArrivee">
@@ -39,7 +39,7 @@
 
       <ng-container matColumnDef="datePaiement">
         <th mat-header-cell *matHeaderCellDef>Date de paiement </th>
-        <td mat-cell *matCellDef="let post"> {{post.datePaiement}} </td>
+        <td mat-cell *matCellDef="let post"> {{post.datePaiement | date : 'dd/MM/yyyy'}} </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

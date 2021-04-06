@@ -32,7 +32,7 @@ export class ModalAchatComponent implements OnInit {
   acheterLot(lot: Lot){
     let commande : CommandeGratuite = {
       datePaiement: new Date(),
-      dateEnvoie: null,
+      dateEnvoie: new Date(),
       dateArrivee: null,
       association: this.associationApi.getAssociation(),
       lot: lot
