@@ -22,7 +22,7 @@ export class AjoutLotComponent implements OnInit {
     libelle: new FormControl('', [Validators.required, Validators.minLength(2)]),
     prixlot: new FormControl(''),
     entreprise: new FormGroup({
-      id: new FormControl(4)
+      id: new FormControl(12)
     })
   })
 

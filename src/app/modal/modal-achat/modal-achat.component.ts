@@ -38,8 +38,7 @@ export class ModalAchatComponent implements OnInit {
       lot: lot
     }
     this.cgApi.create(commande).subscribe((response: Response) => {
-      window.location.href="http://www.google.fr";
-      //this.router.navigateByUrl('/acheteur/historique');
+      this.router.navigateByUrl('/acheteur/historique'); // redirection vers l'historique de commande
     });
   }
 }
